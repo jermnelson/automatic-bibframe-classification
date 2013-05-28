@@ -2,10 +2,12 @@ __author__ = "Jeremy Nelson"
 import os
 import redis
 import unittest
-from naive_bayes import RedisBayesWorkClassifier
+from naive_bayes import CustomWorkClassifier, RedisBayesWorkClassifier
 from numpy import array
 
-TEST_REDIS = redis.StrictRedis(port=6479)
+from conf import TEST_REDIS
+
+
 
 class TestMobyDick(unittest.TestCase):
 
@@ -16,7 +18,8 @@ class TestMobyDick(unittest.TestCase):
         self.labels = [False, False, False, True, True, False, True, False,
                        True, False,True, False, False, False, True, True, True, 
                        True, True, False, False, False]
-        self.classifier.load_training_marc('moby-dick.mrc',
+        self.classifier.load_training_marc(os.path.join('ColoradoCollege',
+                                                        'moby-dick.mrc'),
                                            self.labels)
 
     def test_init(self):
@@ -29,6 +32,7 @@ class TestMobyDick(unittest.TestCase):
         true_tokens = ["moby dick hermin melville 1841 1891",
                        "moby dick herman melville"]
         for tokens in false_tokens:
+            print("False: {0} {1}".format(tokens, self.classifier.__classify__(tokens)))
             self.assert_(not self.classifier.__classify__(tokens))
         for tokens in true_tokens:
             #print("True {0} {1}".format(tokens, self.classifier.__classify__(tokens)))
@@ -40,21 +44,50 @@ class TestMobyDick(unittest.TestCase):
 
 
 
-class TestPrideAndPrejudice(unittest.TestCase):
+class TestRedisBayesWorkClassifierPrideAndPrejudice(unittest.TestCase):
 
     def setUp(self):
         self.classifier = RedisBayesWorkClassifier(
             name="Pride and Prejudice",
             datastore=TEST_REDIS)
-        self.labels = [False, False, True, True, True, True, True, True, False,
-                       True, True, True, False, False, False, False, False,
-                       False, False]
-        self.classifier.load_training_marc('pride-and-prejudice.mrc',
-                                           self.labels)
+        self.labels = [False, # b1629290
+                       False, # b2006265
+                       True, # b1276421
+                       True, # b1313597
+                       True, # b1329008
+                       True, # b1143215
+                       True, # b1177629
+                       False, # b1224585
+                       True, # b1009861
+                       True, # b1605863
+                       True, # b1685471
+                       False, # b1724262
+                       False, # b1724269
+                       False, # b1285281
+                       False, # b1629141
+                       False, # b1636638
+                       False, # b1636639
+                       False, # b1285281
+                       True, # b2033293
+                       False, # b1724269
+                       False, # b1724262
+                       False, # b1629141
+                       False, # b1238652
+                       False, # b1433978
+                       False, # b1628582
+                       False, # b1022859
+                       False, # b1773251
+                       False, # b2089950
+                       False, # b1146944
+                       False] # b1675906
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'),
+            self.labels)
 
     def test_init(self):
         self.assert_(self.classifier is not None)
-        self.assertEquals(len(self.labels), 19)
+        self.assertEquals(len(self.labels), 30)
 
         
     def test_classify_(self):
@@ -62,9 +95,9 @@ class TestPrideAndPrejudice(unittest.TestCase):
                         "jane austen sense sensibility"]
         true_tokens = ["pride prejudice jane austen",
                        "pride prejudice jane austen 1775 1817"]
-        for tokens in false_tokens + true_tokens:
-            print("{0} {1}".format(tokens, self.classifier.__classify__(tokens)))
         for tokens in false_tokens:
+            print("{0} is {1}".format(tokens,
+                                      self.classifier.__classify__(tokens)))
             self.assert_(not self.classifier.__classify__(tokens))
         for tokens in true_tokens:
             self.assert_(self.classifier.__classify__(tokens))
@@ -73,26 +106,67 @@ class TestPrideAndPrejudice(unittest.TestCase):
         TEST_REDIS.flushdb()
 
 
-class BadTEST(object):
+class TestCustomWorkClassifierClassifierPrideAndPrejudice(unittest.TestCase):
+
+    def setUp(self):
+        self.classifier = CustomWorkClassifier(name="Pride and Prejudice",
+                                               datastore=TEST_REDIS,
+                                               simple=True)
+        self.labels = [0, # b1629290
+                       0,
+                       1,
+                       1,
+                       1,
+                       1,
+                       1,
+                       0,
+                       1,
+                       1,
+                       1,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       1,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0,
+                       0] 
 
     def test_init(self):
         self.assert_(self.classifier is not None)
-        self.assertEquals(len(self.labels), 19)
+        self.assertEquals(len(self.labels), 30)
 
     def test_load_training_marc(self):
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.assertEquals(len(self.classifier.training_data),
-                          19)
+                          30)
 
     def test_generate_training_labels(self):
-        labels = 19*[0]
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        labels = 30*[0]
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.classifier.generate_training_labels(labels=labels)
         self.assertEquals(labels, 
                           self.classifier.training_labels)
 
     def test_generate_training_vocabulary(self):
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.classifier.generate_training_labels(labels=self.labels)
         self.classifier.generate_training_vocabulary()
         self.assertEquals(self.classifier.training_vocabulary, 
@@ -101,10 +175,16 @@ class BadTEST(object):
                                'pride', 'crawford', '1958', 'first', 
                                'sentimental', 'carrie', '1883', 'prejudiceor', 
                                 'mansfield', '1775', 'austen', 'prejudice', 
-                               'comedy', 'jerome']))
+                               'comedy', 'jerome', 'mystery', 'emma',
+                               'annotated', 'edition', 'darcy', 'acknowledged',
+                               'mr', 'park', 'revisited', 'mrs', 'prescience',
+                               'suspense', 'truth', 'sense', 'sensibility',
+                               'universally']))
 
     def test_tokens2vectors(self):
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.classifier.generate_training_labels(labels=self.labels)
         self.classifier.generate_training_vocabulary()
         self.assertEquals(self.classifier.tokens2vectors(['austen', 
@@ -115,7 +195,9 @@ class BadTEST(object):
 
 
     def test_generate_training_matrix(self):
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.classifier.generate_training_labels(labels=self.labels)
         self.classifier.generate_training_vocabulary()
         self.classifier.generate_training_matrix()
@@ -124,7 +206,9 @@ class BadTEST(object):
         
          
     def test_train_naive_bayes(self):
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.classifier.generate_training_labels(labels=self.labels)
         self.classifier.generate_training_vocabulary()
         self.classifier.generate_training_matrix()
@@ -135,7 +219,9 @@ class BadTEST(object):
         self.assertEquals(self.classifier.p1Vector[6], 0.16666667)
 
     def test_classify(self):
-        self.classifier.load_training_marc('pride-and-prejudice.mrc')
+        self.classifier.load_training_marc(
+            os.path.join('ColoradoCollege',
+                         'pride-and-prejudice.mrc'))
         self.classifier.generate_training_labels(labels=self.labels)
         self.classifier.generate_training_vocabulary()
         self.classifier.generate_training_matrix()

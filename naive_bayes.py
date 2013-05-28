@@ -9,7 +9,7 @@ import redisbayes
 from lxml import etree
 from numpy import array, float, log, ones, sum, zeros 
 from stopwords import STOPWORDS
-from work_classifer import WorkClassifier, WorkClassifierError
+from work_classifier import WorkClassifier, WorkClassifierError
 
 def load_pg_rdf():
     "Function loads titles/authors into a list for training"
@@ -33,40 +33,12 @@ class RedisBayesWorkClassifier(WorkClassifier):
         """
         result = self.rb.classify(tokens)
         score = self.rb.score(tokens)
-        print("{0} classified as {1} w/ score={1}".format(tokens,
-                                                          result,
-                                                          score))
         if result.startswith('good'):
             return True
         elif result.startswith('bad'):
             return False
         else:
             raise WorkClassifierError("Unknown result={0}".format(result))
-
-    def __tokenize_marc21__(self, marc_record):
-        """Method tokenizes MARC21 record
-
-        Parameters:
-        marc_record -- MARC21 Record
-        """
-        
-        words_re = re.compile(r"(\w+)")
-        def __filter_term__(term):
-            terms = []
-            for word in words_re.findall(title):
-                word = word.lower()
-                if STOPWORDS.count(word.lower()) < 1:
-                    terms.append(word)
-            return terms
-        tokens = []        
-        title = marc_record.title()
-        if title is not None:
-            tokens.extend(__filter_term__(title))                
-        author = marc_record.author()
-        #! NOT WORKING, author terms not returning
-        if author is not None:
-            tokens.extend(__filter_term__(author))
-        return list(set(tokens))
            
 
     def classify_marc_record(self, marc_record):
@@ -95,10 +67,10 @@ class RedisBayesWorkClassifier(WorkClassifier):
         for record in marc_reader:
             self.records.append(record)
         if len(self.records) != len(marc_labels):
-            raise WorkClassifierError(
-                "Number of records {0} must match MARC Labels {1}".format(
-                    len(self.records),
-                    len(marc_labels)))
+            error_msg = "Number of records {0} must match MARC Labels {1}".format(
+                len(self.records),
+                len(marc_labels))
+            raise WorkClassifierError(error_msg)
         count = 0
         good_tokens, bad_tokens = [], []
         for record in self.records:
@@ -127,6 +99,7 @@ class CustomWorkClassifier(WorkClassifier):
         self.training_labels = list()
         self.training_matrix = []
         self.training_vocabulary = set([])
+        self.simple = kwargs.get('simple', False)
 
     def classify(self, token_list):
         """Method classifies a vector of tokens 
@@ -138,8 +111,17 @@ class CustomWorkClassifier(WorkClassifier):
         token_list -- A set of tokens to be tested
         """
         token_vector = array(self.tokens2vectors(token_list))
-        p0 = sum(token_vector * self.p0Vector) + log(self.pWork)
-        p1 = sum(token_vector * self.p1Vector) + log(self.pWork)
+        if self.simple is True:
+            p0 = sum(token_vector * self.p0Vector) + self.pWork
+            p1 = sum(token_vector * self.p1Vector) + self.pWork
+        else:
+            p0 = sum(token_vector * self.p0Vector) + log(1.0 - self.pWork)
+            p1 = sum(token_vector * self.p1Vector) + log(self.pWork)
+        print("""For {0},
+p0={1} p1={2},
+token_vector={3}
+p0Vector={4}
+""".format(token_list, p0, p1, token_vector, self.p0Vector))
         if p1 > p0:
             return 1
         return 0
@@ -180,20 +162,7 @@ class CustomWorkClassifier(WorkClassifier):
         marc_reader = pymarc.MARCReader(open(marc_filename, 'rb'))
         words_re = re.compile(r"(\w+)")
         for record in marc_reader:
-            tokens = []
-            title = record.title()
-            if title is not None:
-                for word in words_re.findall(title):
-                    word = word.lower()
-                    if STOPWORDS.count(word.lower()) < 1:
-                        tokens.append(word)
-            author = record.author()
-            if author is not None:
-                for word in words_re.findall(author):
-                    word = word.lower()
-                    if STOPWORDS.count(word) < 1:
-                        tokens.append(word)
-            self.training_data.append(tokens)
+            self.training_data.append(self.__tokenize_marc21__(record))
 
     def load_training_rdf(self, rdf_location, is_gutenberg=False):
         """Method loads a RDF file into training data
@@ -218,8 +187,10 @@ class CustomWorkClassifier(WorkClassifier):
         vocab_list = list(self.training_vocabulary)
         for token in input_set:
             if token in self.training_vocabulary:
-                result_vector[vocab_list.index(token)] += 1
-                #result_vector[vocab_list.index(token)] = 1
+                if self.simple is True:
+                    result_vector[vocab_list.index(token)] = 1
+                else:
+                    result_vector[vocab_list.index(token)] += 1
             else:
                 print("{0} not found in training_vocabulary!".format(token))
         return result_vector
@@ -230,10 +201,12 @@ class CustomWorkClassifier(WorkClassifier):
         total = len(self.training_matrix)
         number_tokens = len(self.training_matrix[0])
         self.pWork = sum(self.training_labels)/float(total)
-        p0Number, p1Number = ones(number_tokens), ones(number_tokens)
-        p0Denominator, p1Denominator = 2.0, 2.0
-        #p0Number, p1Number = zeros(number_tokens), zeros(number_tokens)
-        #p0Denominator, p1Denominator = 0.0, 0.0
+        if self.simple is True:
+            p0Number, p1Number = zeros(number_tokens), zeros(number_tokens)
+            p0Denominator, p1Denominator = 0.0, 0.0
+        else:
+            p0Number, p1Number = ones(number_tokens), ones(number_tokens)
+            p0Denominator, p1Denominator = 2.0, 2.0        
         for i in range(total):
             if self.training_labels[i] == 1:
                 p1Number += self.training_matrix[i]
@@ -241,9 +214,12 @@ class CustomWorkClassifier(WorkClassifier):
             else:
                 p0Number += self.training_matrix[i]
                 p0Denominator += sum(self.training_matrix[i])
-        #self.p0Vector = log(p0Number / p0Denominator)
-        #self.p1Vector = log(p1Number / p1Denominator)
-        self.p0Vector = p0Number / p0Denominator
-        self.p1Vector = p1Number / p1Denominator
+        if self.simple is True:
+            self.p0Vector = p0Number / p0Denominator
+            self.p1Vector = p1Number / p1Denominator
+        else:
+            self.p0Vector = log(p0Number / p0Denominator)
+            self.p1Vector = log(p1Number / p1Denominator)
+        
 
 

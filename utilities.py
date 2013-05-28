@@ -1,5 +1,5 @@
 """
- jython utilities for Jeremy Nelson 
+ Utilities for Automatic BIBFRAME Classification 
 """
 __author__ = "Jeremy Nelson"
 import datetime
@@ -7,23 +7,77 @@ import json
 import os
 import random
 import sys
-sys.path.append(os.path.join("lib",
-                             "marc4j.jar"))
-import java.io.FileInputStream as FileInputStream
-import java.io.FileOutputStream as FileOutputStream
-import org.marc4j as marc4j
+from work_classifier import WorkClassifier
+try:
+    import lxml.etree as etree
+except ImportError, e:
+    import xml.etree.ElementTree as etree
+    
+if os.name == 'java':
+    sys.path.append(os.path.join("lib",
+                                 "marc4j.jar"))
+    import java.io.FileInputStream as FileInputStream
+    import java.io.FileOutputStream as FileOutputStream
+    import org.marc4j as marc4j
 
-DATA_ROOT = os.path.split(os.getcwd())[0]
-CARL_STATS = json.load(open('alliance-stats.json', 'rb'))
-CARL_POSITIONS = {}
-for key in CARL_STATS.keys():
-    if type(CARL_STATS[key]) == dict:
-        CARL_POSITIONS[(CARL_STATS[key]['start'],
-                        CARL_STATS[key]['end'])] = {'filename':key, 
-                                                    'training-recs':[],
-                                                    'testing-recs':[]}
+    DATA_ROOT = os.path.split(os.getcwd())[0]
+    CARL_STATS = json.load(open('alliance-stats.json', 'rb'))
+    CARL_POSITIONS = {}
+    for key in CARL_STATS.keys():
+        if type(CARL_STATS[key]) == dict:
+            CARL_POSITIONS[(CARL_STATS[key]['start'],
+                            CARL_STATS[key]['end'])] = {'filename':key, 
+                                                        'training-recs':[],
+                                                        'testing-recs':[]}
 
-SORTED_POSITIONS = sorted(CARL_POSITIONS.keys())
+    SORTED_POSITIONS = sorted(CARL_POSITIONS.keys())
+
+def create_row_from_marc(marc_record,
+                         is_work=False,
+                         reason=None):
+    """Function creates a table row from a MARC21 record
+
+    Keywords:
+    marc_record -- pymarc MARC21 record 
+    """
+    tr = etree.Element("tr")
+    # Record ID
+    bib_id_td = etree.SubElement(tr, "td")
+    field907 = marc_record['907']
+    if field907.subfields.count('a') > 0:
+        bib_id_td.text = field907['a'][1:-1]
+    # Title
+    title = marc_record.title()
+    title_td = etree.SubElement(tr, "td")
+    if title is not None:
+        title_td.text = title
+    # Author
+    author = marc_record.author()
+    author_td = etree.SubElement(tr, "td")
+    if author is not None:
+        author_td.text = author
+    # Tokenized terms
+    classifier = WorkClassifier(name=title, datastore=None)
+    terms = classifier.__tokenize_marc21__(marc_record)
+    print("Terms are {0}".format(terms))
+    terms_td = etree.SubElement(tr, "td")
+    if terms is not None:
+        terms_td.text = str(sorted(terms))
+    # Is work?
+    is_work_td = etree.SubElement(tr, "td")
+    if is_work is True:
+        is_work_td.text = "True"
+    else:
+        is_work_td.text = "False"
+    if reason is not None:
+        is_work_td.text += ', {0}'.format(reason)
+    return etree.tostring(tr)
+    
+        
+        
+        
+    
+    
 
 def get_range(value, rec_range):
     row = rec_range[0]
@@ -33,6 +87,8 @@ def get_range(value, rec_range):
         return get_range(value, rec_range[1:])
 
 def GenerateAllianceSets():
+    if os.name != 'java':
+        return
     start_time = datetime.datetime.utcnow()
     print("Starting generation of Alliance Training and Testing Sets at {0}".format(start_time.isoformat()))
     training_mrc = marc4j.MarcStreamWriter(
@@ -87,6 +143,8 @@ def GenerateAllianceSets():
 
 
 def get_carl_marc_record(position):
+    if os.name != 'java':
+        return
     previous_value = 0
     marc_file = None
     for number in SORTED_POSITIONS:
@@ -114,6 +172,8 @@ def get_carl_marc_record(position):
     
 
 def SlowGenerateAllianceSets():
+    if os.name != 'java':
+        return
     start_time = datetime.datetime.utcnow()
     print("Starting generation of Alliance Training and Testing Sets at {0}".format(start_time.isoformat()))
     training_mrc = marc4j.MarcStreamWriter(
@@ -158,6 +218,8 @@ def SlowGenerateAllianceSets():
     print("Total time is {0} minutes".format((end_time-start_time).seconds / 60.0))
 
 def GenerateColoradoCollegeSets(marc_file, max_recs=984751):
+    if os.name != 'java':
+        return
     start_time = datetime.datetime.utcnow()
     print("Start GenerateColoradoCollegeSets at {0}".format(start_time.isoformat()))
 
@@ -211,3 +273,4 @@ def GenerateColoradoCollegeSets(marc_file, max_recs=984751):
     end_date = datetime.datetime.utcnow()
     print("Finished generating Colorado College training and testing sets at {0}".format(end_date.isoformat()))
     print("Total time {0} minutes".format((end_date - start_time).seconds / 60.0))
+

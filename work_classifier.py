@@ -5,14 +5,17 @@ WorkClassifier should be extended by implementing child classes
 """
 __author__ = "Jeremy Nelson"
 
+import os
+import re
 import redis
+from stopwords import STOPWORDS
 
 class WorkClassifierError(Exception):
 
     def __init__(self, value):
         self.value = value
 
-    def __str__(self, value):
+    def __str__(self):
         return repr(self.value)
 
 class WorkClassifier(object):
@@ -31,14 +34,27 @@ class WorkClassifier(object):
         pass
     
     def __tokenize_marc21__(self, marc_record):
-        """Method tokenizes MARC21 record, 
+        """Method tokenizes MARC21 record
 
-        Should be overridden by be overridden by implementing child classes
-        
         Parameters:
         marc_record -- MARC21 Record
         """
-        pass
+        words_re = re.compile(r"(\w+)")
+        def __filter_term__(term):
+            terms = []
+            for word in words_re.findall(term):
+                word = word.lower()
+                if STOPWORDS.count(word.lower()) < 1:
+                    terms.append(word)
+            return terms
+        tokens = []        
+        title = marc_record.title()
+        if title is not None:
+            tokens.extend(__filter_term__(title))                
+        author = marc_record.author()
+        if author is not None:
+            tokens.extend(__filter_term__(author))
+        return list(set(tokens))
     
     def classify_marc_record(self, marc_record):
         """Method classifies a single MARC21 record
