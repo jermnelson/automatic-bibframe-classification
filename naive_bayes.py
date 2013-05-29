@@ -121,7 +121,13 @@ class CustomWorkClassifier(WorkClassifier):
 p0={1} p1={2},
 token_vector={3}
 p0Vector={4}
-""".format(token_list, p0, p1, token_vector, self.p0Vector))
+p1Vector={5}
+""".format(token_list, 
+           p0, 
+           p1, 
+           token_vector, 
+           self.p0Vector,
+           self.p1Vector))
         if p1 > p0:
             return 1
         return 0

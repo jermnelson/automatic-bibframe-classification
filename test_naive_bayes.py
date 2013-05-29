@@ -201,6 +201,7 @@ class TestCustomWorkClassifierClassifierPrideAndPrejudice(unittest.TestCase):
         self.classifier.generate_training_labels(labels=self.labels)
         self.classifier.generate_training_vocabulary()
         self.classifier.generate_training_matrix()
+        print("IN training matrix test={0}".format(self.classifier.training_matrix))
         self.assertEquals(self.classifier.training_matrix[0][6],
                           1)  
         
