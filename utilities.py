@@ -7,6 +7,7 @@ import json
 import os
 import random
 import sys
+
 from work_classifier import WorkClassifier
 try:
     import lxml.etree as etree
@@ -31,7 +32,7 @@ if os.name == 'java':
                                                         'testing-recs':[]}
 
     SORTED_POSITIONS = sorted(CARL_POSITIONS.keys())
-
+    
 def create_row_from_marc(marc_record,
                          is_work=False,
                          reason=None):
@@ -59,7 +60,6 @@ def create_row_from_marc(marc_record,
     # Tokenized terms
     classifier = WorkClassifier(name=title, datastore=None)
     terms = classifier.__tokenize_marc21__(marc_record)
-    print("Terms are {0}".format(terms))
     terms_td = etree.SubElement(tr, "td")
     if terms is not None:
         terms_td.text = str(sorted(terms))
@@ -73,9 +73,28 @@ def create_row_from_marc(marc_record,
         is_work_td.text += ', {0}'.format(reason)
     return etree.tostring(tr)
     
-        
-        
-        
+def process_marc_article(all_recs):
+    labels = []
+    html_output = ''
+    for i,rec in enumerate(all_recs):
+        print("For record {0}".format(i))
+        carrier_type = get_format(rec)
+        is_work, reason = False, None
+        prompt = raw_input("""Is {0} by {1} with
+carrier type of {2} the primary work?""".format(rec.title(),
+                                                rec.author(),
+                                                carrier_type))
+        if prompt.lower().startswith("y"):
+            is_work = True
+        else:
+            prompt = raw_input("Is reason due to carrier type of {0}?".format(carrier_type))
+            if prompt.lower().startswith("y"):
+                reason = "record is {0}".format(carrier_type)
+        html_output += create_row_from_marc(rec,
+                                            is_work,
+                                            reason)
+        labels.append(is_work)
+    return labels, html_output
     
     
 

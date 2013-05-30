@@ -9,15 +9,15 @@ from conf import TEST_REDIS
 
 
 
-class TestMobyDick(unittest.TestCase):
+class TestRedisBayesMobyDick(unittest.TestCase):
 
     def setUp(self):
         self.classifier = RedisBayesWorkClassifier(
             name="Moby Dick",
             datastore=TEST_REDIS)
         self.labels = [False, False, False, True, True, False, True, False,
-                       True, False,True, False, False, False, True, True, True, 
-                       True, True, False, False, False]
+                       True, False, True, False, False, False, True, True, True,
+                       True, True, True, False, False]
         self.classifier.load_training_marc(os.path.join('ColoradoCollege',
                                                         'moby-dick.mrc'),
                                            self.labels)
@@ -28,23 +28,28 @@ class TestMobyDick(unittest.TestCase):
 
     def test_classify(self):
         false_tokens = ["pride prejudice jane austen",
-                        "infinite jest david foster wallace"]
+                        "infinite jest david foster wallace",
+                        "jane eyre emily bronte"]
         true_tokens = ["moby dick hermin melville 1841 1891",
                        "moby dick herman melville"]
         for tokens in false_tokens:
-            print("False: {0} {1}".format(tokens, self.classifier.__classify__(tokens)))
             self.assert_(not self.classifier.__classify__(tokens))
         for tokens in true_tokens:
-            #print("True {0} {1}".format(tokens, self.classifier.__classify__(tokens)))
             self.assert_(self.classifier.__classify__(tokens))
 
      
     def tearDown(self):
         TEST_REDIS.flushdb()
 
+class TestCustomMobyDick(unittest.TestCase):
 
+    def setUp(self):
+        self.classifier = CustomWorkClassifier(name="Pride and Prejudice",
+                                               datastore=TEST_REDIS,
+                                               simple=True)
+        self.labels = []
 
-class TestRedisBayesWorkClassifierPrideAndPrejudice(unittest.TestCase):
+class TestRedisBayesPrideAndPrejudice(unittest.TestCase):
 
     def setUp(self):
         self.classifier = RedisBayesWorkClassifier(
@@ -106,7 +111,7 @@ class TestRedisBayesWorkClassifierPrideAndPrejudice(unittest.TestCase):
         TEST_REDIS.flushdb()
 
 
-class TestCustomWorkClassifierClassifierPrideAndPrejudice(unittest.TestCase):
+class TestCustomPrideAndPrejudice(unittest.TestCase):
 
     def setUp(self):
         self.classifier = CustomWorkClassifier(name="Pride and Prejudice",
