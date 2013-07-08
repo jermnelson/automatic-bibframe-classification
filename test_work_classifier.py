@@ -18,6 +18,7 @@ class TestWorkClassifier(unittest.TestCase):
 
     def test_tokenize_marc21_one(self):
         marc_record = pymarc.Record()
+        marc_record.leader = marc_record.leader[0:6] + 'a' + marc_record.leader[7:]
         marc_record.add_field(
             pymarc.Field(tag='100',
                          indicators=['1', ' '],
@@ -32,6 +33,7 @@ class TestWorkClassifier(unittest.TestCase):
         self.assertEquals(
             sorted(self.classifier.__tokenize_marc21__(marc_record)),
             ['ahab',
+             'book',
              'gazer',
              'jeter',
              'naslund',
@@ -49,7 +51,7 @@ class TestWorkClassifier(unittest.TestCase):
                                       'b', "a novel /"]))
         self.assertEquals(
             self.classifier.__tokenize_marc21__(marc_record),
-            ['gazer', 'novel', 'star', 'ahab', 'wife'])
+            ['novel', 'star', 'ahab', 'wife', 'work', 'gazer'])
 
     
 
