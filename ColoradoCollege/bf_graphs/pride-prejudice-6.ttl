@@ -1,0 +1,71 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/908886annotation11> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/908886> ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/908886.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/nonisbd> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/coc> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/908886instance12> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "18 cm." ;
+    bf:extent "ix, 386 p." ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/908886> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/908886title15> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "New York, Pantheon 1948" ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "[1948]" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Pantheon" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "New York" ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue "(CoCC)53204" ],
+        [ a bf:Identifier ;
+            bf:identifierAssigner "tbp" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b11776298" ] ;
+    bf:titleStatement "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/908886classification8> a bf:Classification ;
+    bf:classificationNumber "PR4034.P7 F48" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/908886person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/908886title15> a bf:Title ;
+    bf:label "Pride and prejudice." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/908886title5> a bf:Title ;
+    bf:label "Pride and prejudice." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/908886work9> a bf:Work ;
+    bf:authorizedAccessPoint "The Novel library." ;
+    bf:title "The Novel library." .
+
+<http://catalog.coloradocollege.edu/908886> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice.Pride and prejudice",
+        "austenjane17751817prideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/908886classification8> ;
+    bf:creator <http://catalog.coloradocollege.edu/908886person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:series <http://catalog.coloradocollege.edu/908886work9> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/908886title5> .
+

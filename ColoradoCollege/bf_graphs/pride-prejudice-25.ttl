@@ -1,0 +1,72 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/3501749annotation10> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/3501749> ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/3501749.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/nonisbd> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/m.c>,
+        <http://id.loc.gov/vocabulary/organizations/suc> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/3501749instance11> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "18 cm." ;
+    bf:extent "2 v." ;
+    bf:illustrationNote "fronts." ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/3501749> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/3501749title14> ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            bf:identifierValue "06-3865" ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "Boston, Roberts brothers, 1892." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "1892" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Roberts brothers" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Boston" ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tbp" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b10228597" ],
+        [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue "(CoCC)126659" ] ;
+    bf:titleStatement "Mansfield park" .
+
+<http://catalog.coloradocollege.edu/3501749classification8> a bf:Classification ;
+    bf:classificationNumber "PR4034.M3 E92" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/3501749person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/3501749title14> a bf:Title ;
+    bf:label "Mansfield park, by Jane Austen." ;
+    bf:titleValue "Mansfield park," .
+
+<http://catalog.coloradocollege.edu/3501749title5> a bf:Title ;
+    bf:label "Mansfield park, by Jane Austen." ;
+    bf:titleValue "Mansfield park," .
+
+<http://catalog.coloradocollege.edu/3501749> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Mansfield park, by Jane Austen.Mansfield park,",
+        "austenjane17751817mansfieldparkwork"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/3501749classification8> ;
+    bf:creator <http://catalog.coloradocollege.edu/3501749person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/3501749title5> .
+

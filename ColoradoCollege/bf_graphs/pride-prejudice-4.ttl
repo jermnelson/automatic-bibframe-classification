@@ -1,0 +1,82 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/8383316annotation13> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/8383316> ;
+    bf:changeDate "1998-10-12T11:22" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/8383316.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/zmm> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/8383316instance14> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "18 cm." ;
+    bf:extent "xxiii, 401 p. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/8383316> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/8383316title17> ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            bf:identifierValue "18007296" ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "Series title also at head of t.-p." ;
+    bf:providerStatement "New York, Chicago etc. : C. Scribner's sons, c1918" ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "[c1918]" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "C. Scribner's sons" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "New York, Chicago etc. " ] ] ;
+    bf:titleStatement "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/8383316classification10> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/8383316classification9> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/8383316person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/8383316person7> a bf:Person ;
+    bf:authorizedAccessPoint "Howells, William Dean, 1837-1920." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Howells, William Dean, 1837-1920." ] ;
+    bf:label "Howells, William Dean, 1837-1920." .
+
+<http://catalog.coloradocollege.edu/8383316title17> a bf:Title ;
+    bf:label "Pride and prejudice / by Jane Austen; with an introduction by William Dean Howells." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/8383316title5> a bf:Title ;
+    bf:label "Pride and prejudice / by Jane Austen; with an introduction by William Dean Howells." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/8383316work11> a bf:Work ;
+    bf:authorizedAccessPoint "The modern student's library." ;
+    bf:title "The modern student's library." .
+
+<http://catalog.coloradocollege.edu/8383316> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice / by Jane Austen; with an introduction by William Dean Howells.Pride and prejudice",
+        "austenjane17751817prideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/8383316classification10>,
+        <http://catalog.coloradocollege.edu/8383316classification9> ;
+    bf:contributor <http://catalog.coloradocollege.edu/8383316person7> ;
+    bf:creator <http://catalog.coloradocollege.edu/8383316person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:series <http://catalog.coloradocollege.edu/8383316work11> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/8383316title5> .
+

@@ -1,0 +1,248 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/58456522annotation25> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/58456522> ;
+    bf:changeDate "2009-02-01T03:34" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/58456522.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/baker>,
+        <http://id.loc.gov/vocabulary/organizations/btcta>,
+        <http://id.loc.gov/vocabulary/organizations/bwkuk>,
+        <http://id.loc.gov/vocabulary/organizations/nlggc>,
+        <http://id.loc.gov/vocabulary/organizations/oclcg>,
+        <http://id.loc.gov/vocabulary/organizations/tbs>,
+        <http://id.loc.gov/vocabulary/organizations/ukm>,
+        <http://id.loc.gov/vocabulary/organizations/ydxcp> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/58456522helditem43> a bf:HeldItem ;
+    bf:holdingFor <http://catalog.coloradocollege.edu/58456522instance26> ;
+    bf:label "PR4034 .M3 2005" ;
+    bf:shelfMarkLcc "PR4034 .M3 2005" .
+
+<http://catalog.coloradocollege.edu/58456522instance26> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "23 cm." ;
+    bf:extent "lxxxvi, 738 p. :" ;
+    bf:illustrationNote "ill. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/58456522> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/58456522title29> ;
+    bf:isbn10 <http://isbn.example.org/0521827655> ;
+    bf:isbn13 <http://isbn.example.org/9780521827652> ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            bf:identifierValue "2005006336" ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "Cambridge, England ; New York : Cambridge University Press, 2005." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "2005" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Cambridge University Press" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Cambridge, England " ] ] ;
+    bf:supplementaryContentNote "Includes bibliographical references (p. 639-738)" ;
+    bf:systemNumber <http://www.worldcat.org/oclc/58456522> ;
+    bf:titleStatement "Mansfield Park" .
+
+<http://catalog.coloradocollege.edu/58456522person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/58456522person7> a bf:Person ;
+    bf:authorizedAccessPoint "Wiltshire, John." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Wiltshire, John." ] ;
+    bf:label "Wiltshire, John." .
+
+<http://catalog.coloradocollege.edu/58456522title29> a bf:Title ;
+    bf:label "Mansfield Park / Jane Austen ; edited by John Wiltshire." ;
+    bf:titleValue "Mansfield Park" .
+
+<http://catalog.coloradocollege.edu/58456522title5> a bf:Title ;
+    bf:label "Mansfield Park / Jane Austen ; edited by John Wiltshire." ;
+    bf:titleValue "Mansfield Park" .
+
+<http://catalog.coloradocollege.edu/58456522topic10> a bf:Topic ;
+    bf:authorizedAccessPoint "Children of the rich--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Children of the rich--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Children of the rich" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Children of the rich" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Children of the rich--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic11> a bf:Topic ;
+    bf:authorizedAccessPoint "Social classes--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Social classes--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Social classes" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Social classes" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Social classes--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic12> a bf:Topic ;
+    bf:authorizedAccessPoint "Country homes--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Country homes--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Country homes" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Country homes" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Country homes--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic13> a bf:Topic ;
+    bf:authorizedAccessPoint "Adoptees--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Adoptees--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Adoptees" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Adoptees" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Adoptees--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic14> a bf:Topic ;
+    bf:authorizedAccessPoint "Cousins--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Cousins--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Cousins" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Cousins" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Cousins--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic15> a bf:Topic ;
+    bf:authorizedAccessPoint "Uncles--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Uncles--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Uncles" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Uncles" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Uncles--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic16> a bf:Topic ;
+    bf:authorizedAccessPoint "Domestic fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Domestic fiction" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Domestic fiction" .
+
+<http://catalog.coloradocollege.edu/58456522topic17> a bf:Topic ;
+    bf:authorizedAccessPoint "Bildungsromans" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Bildungsromans" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Bildungsromans" .
+
+<http://catalog.coloradocollege.edu/58456522topic18> a bf:Topic ;
+    bf:authorizedAccessPoint "Love stories" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Love stories" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Love stories" .
+
+<http://catalog.coloradocollege.edu/58456522topic9> a bf:Topic ;
+    bf:authorizedAccessPoint "Young women--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Young women--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Young women" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Young women" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Young women--Fiction" .
+
+<http://catalog.coloradocollege.edu/58456522work22> a bf:Work ;
+    bf:authorizedAccessPoint "The Cambridge edition of the works of Jane Austen." ;
+    bf:title "The Cambridge edition of the works of Jane Austen." .
+
+<http://catalog.coloradocollege.edu/58456522work23> a bf:Work ;
+    bf:authorizedAccessPoint "Works. 2005." ;
+    bf:title "Works. 2005." .
+
+<http://catalog.coloradocollege.edu/58456522> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Mansfield Park / Jane Austen ; edited by John Wiltshire.Mansfield Park",
+        "austenjane17751817mansfieldparkwork"@x-bf-hash ;
+    bf:classificationLcc <http://id.loc.gov/authorities/classification/PR4034> ;
+    bf:contributor <http://catalog.coloradocollege.edu/58456522person7> ;
+    bf:creator <http://catalog.coloradocollege.edu/58456522person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:series <http://catalog.coloradocollege.edu/58456522work22>,
+        <http://catalog.coloradocollege.edu/58456522work23> ;
+    bf:subject <http://catalog.coloradocollege.edu/58456522topic10>,
+        <http://catalog.coloradocollege.edu/58456522topic11>,
+        <http://catalog.coloradocollege.edu/58456522topic12>,
+        <http://catalog.coloradocollege.edu/58456522topic13>,
+        <http://catalog.coloradocollege.edu/58456522topic14>,
+        <http://catalog.coloradocollege.edu/58456522topic15>,
+        <http://catalog.coloradocollege.edu/58456522topic16>,
+        <http://catalog.coloradocollege.edu/58456522topic17>,
+        <http://catalog.coloradocollege.edu/58456522topic18>,
+        <http://catalog.coloradocollege.edu/58456522topic9>,
+        <http://id.loc.gov/vocabulary/geographicAreas/e-uk-en> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/58456522title5> .
+

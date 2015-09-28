@@ -1,0 +1,199 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/699763746annotation20> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/699763746> ;
+    bf:changeDate "2012-06-22T11:08" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/699763746.marcxml.xml> ;
+    bf:descriptionAuthentication <http://id.loc.gov/vocabulary/descriptionAuthentication/lccopycat> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionLanguage <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/bdx>,
+        <http://id.loc.gov/vocabulary/organizations/bul>,
+        <http://id.loc.gov/vocabulary/organizations/bwx>,
+        <http://id.loc.gov/vocabulary/organizations/cgu>,
+        <http://id.loc.gov/vocabulary/organizations/dlc>,
+        <http://id.loc.gov/vocabulary/organizations/ukmgb>,
+        <http://id.loc.gov/vocabulary/organizations/ydxcp>,
+        <http://id.loc.gov/vocabulary/organizations/zhx> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/btcta> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/699763746helditem43> a bf:HeldItem ;
+    bf:holdingFor <http://catalog.coloradocollege.edu/699763746instance21> ;
+    bf:label "PR4034 .E5 2012c" ;
+    bf:shelfMarkLcc "PR4034 .E5 2012c" .
+
+<http://catalog.coloradocollege.edu/699763746summary10> a bf:Summary ;
+    bf:annotationAssertedBy <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:annotationBody "\"From the editor of the popular Annotated Pride and Prejudice comes an annotated edition of Jane Austen's Emma that makes her beloved tale of an endearingly inept matchmaker an even more satisfying read. Here is the complete text of the novel with more than 2,200 annotations on facing pages, including: explanations of historical context; citations from Austen's life, letters, and other writings; definitions and clarifications; literary comments and analysis; maps of places in the novel; an introduction, bibliography, and detailed chronology of events; [and] nearly 200 informative illustrations. Filled with fascinating information about everything from the social status of spinsters and illegitimate children to the shopping habits of fashionable ladies to English attitudes toward gypsies, David M. Shapard's Annotated Emma brings Austen's world into richer focus\"--Provided by publisher." ;
+    bf:label "Summary" ;
+    bf:summaryOf <http://catalog.coloradocollege.edu/699763746> .
+
+<http://catalog.coloradocollege.edu/699763746instance21> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "21 cm." ;
+    bf:extent "xxx, 897 p. :" ;
+    bf:illustrationNote "ill., maps ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/699763746> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/699763746title24> ;
+    bf:isbn10 <http://isbn.example.org/0307390772> ;
+    bf:isbn13 <http://isbn.example.org/9780307390776> ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            bf:identifierValue "2011277545" ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "\"From the editor of the popular Annotated Pride and Prejudice comes an annotated edition of Jane Austen's Emma that makes her beloved tale of an endearingly inept matchmaker an even more satisfying read. Here is the complete text of the novel with more than 2,200 annotations on facing pages, including: explanations of historical context; citations from Austen's life, letters, and other writings; definitions and clarifications; literary comments and analysis; maps of places in the novel; an introduction, bibliography, and detailed chronology of events; [and] nearly 200 informative illustrations. Filled with fascinating information about everything from the social status of spinsters and illegitimate children to the shopping habits of fashionable ladies to English attitudes toward gypsies, David M. Shapard's Annotated Emma brings Austen's world into richer focus\"--Provided by publisher." ;
+    bf:providerStatement "New York : Anchor Books, 2012." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "2012" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Anchor Books" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "New York " ] ] ;
+    bf:supplementaryContentNote "Includes bibliographical references (p. 873-892)" ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierStatus "canceled/invalid" ;
+            bf:identifierValue "(OCoLC)760290515" ],
+        [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierStatus "canceled/invalid" ;
+            bf:identifierValue "(OCoLC)792749384" ],
+        <http://www.worldcat.org/oclc/699763746> ;
+    bf:title "annotated Emma"@x-bf-sort ;
+    bf:titleStatement "The annotated Emma" ;
+    bf:titleVariation <http://catalog.coloradocollege.edu/699763746title26> .
+
+<http://catalog.coloradocollege.edu/699763746person7> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/699763746person8> a bf:Person ;
+    bf:authorizedAccessPoint "Shapard, David M." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Shapard, David M." ] ;
+    bf:label "Shapard, David M." .
+
+<http://catalog.coloradocollege.edu/699763746title24> a bf:Title ;
+    bf:label "The annotated Emma / Jane Austen ; annotated and edited, with an introduction, by David M. Shapard." ;
+    bf:titleValue "The annotated Emma" .
+
+<http://catalog.coloradocollege.edu/699763746title26> a bf:Title ;
+    bf:label "Emma." ;
+    bf:titleType "portion" ;
+    bf:titleValue "Emma." .
+
+<http://catalog.coloradocollege.edu/699763746title5> a bf:Title ;
+    bf:label "The annotated Emma / Jane Austen ; annotated and edited, with an introduction, by David M. Shapard." ;
+    bf:titleValue "The annotated Emma" .
+
+<http://catalog.coloradocollege.edu/699763746topic11> a bf:Topic ;
+    bf:authorizedAccessPoint "Fathers and daughters--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Fathers and daughters--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Fathers and daughters" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Fathers and daughters" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Fathers and daughters--Fiction" .
+
+<http://catalog.coloradocollege.edu/699763746topic12> a bf:Topic ;
+    bf:authorizedAccessPoint "Female friendship--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Female friendship--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Female friendship" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Female friendship" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Female friendship--Fiction" .
+
+<http://catalog.coloradocollege.edu/699763746topic13> a bf:Topic ;
+    bf:authorizedAccessPoint "Mate selection--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Mate selection--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Mate selection" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Mate selection" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Mate selection--Fiction" .
+
+<http://catalog.coloradocollege.edu/699763746topic14> a bf:Topic ;
+    bf:authorizedAccessPoint "Young women--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Young women--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Young women" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Young women" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Young women--Fiction" .
+
+<http://catalog.coloradocollege.edu/699763746topic15> a bf:Topic ;
+    bf:authorizedAccessPoint "Love stories" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Love stories" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Love stories" .
+
+<http://catalog.coloradocollege.edu/699763746topic16> a bf:Topic ;
+    bf:authorizedAccessPoint "Bildungsromans" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Bildungsromans" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Bildungsromans" .
+
+<http://catalog.coloradocollege.edu/699763746> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. The annotated Emma / Jane Austen ; annotated and edited, with an introduction, by David M. Shapard.The annotated Emma",
+        "austenjane17751817annotatedemmawork"@x-bf-hash ;
+    bf:classificationLcc <http://id.loc.gov/authorities/classification/PR4034> ;
+    bf:contributor <http://catalog.coloradocollege.edu/699763746person8> ;
+    bf:creator <http://catalog.coloradocollege.edu/699763746person7> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:subject <http://catalog.coloradocollege.edu/699763746topic11>,
+        <http://catalog.coloradocollege.edu/699763746topic12>,
+        <http://catalog.coloradocollege.edu/699763746topic13>,
+        <http://catalog.coloradocollege.edu/699763746topic14>,
+        <http://catalog.coloradocollege.edu/699763746topic15>,
+        <http://catalog.coloradocollege.edu/699763746topic16> ;
+    bf:title "annotated Emma"@x-bf-sort ;
+    bf:workTitle <http://catalog.coloradocollege.edu/699763746title5> .
+

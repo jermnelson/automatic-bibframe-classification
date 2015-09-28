@@ -1,0 +1,93 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/71007642annotation14> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/71007642> ;
+    bf:changeDate "2006-10-16T09:00" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/71007642.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/baker>,
+        <http://id.loc.gov/vocabulary/organizations/gzm>,
+        <http://id.loc.gov/vocabulary/organizations/oclcq>,
+        <http://id.loc.gov/vocabulary/organizations/ydxcp> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/eqo> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/71007642instance15> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "23 cm." ;
+    bf:ean [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/ean> ;
+            bf:identifierValue "9780521825146" ] ;
+    bf:extent "lxxx, 540 p. :" ;
+    bf:illustrationNote "ill. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/71007642> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/71007642title18> ;
+    bf:isbn10 <http://isbn.example.org/0521825148> ;
+    bf:isbn13 <http://isbn.example.org/9780521825146> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "Cambridge ; New York : Cambridge University Press, 2006." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "2006" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Cambridge University Press" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Cambridge " ] ] ;
+    bf:supplementaryContentNote "Includes bibliographical references." ;
+    bf:titleStatement "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/71007642classification10> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/71007642classification9> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/71007642person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/71007642person7> a bf:Person ;
+    bf:authorizedAccessPoint "Rogers, Pat, 1938-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Rogers, Pat, 1938-" ] ;
+    bf:label "Rogers, Pat, 1938-" .
+
+<http://catalog.coloradocollege.edu/71007642title18> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen ; edited by Pat Rogers." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/71007642title5> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen ; edited by Pat Rogers." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/71007642work11> a bf:Work ;
+    bf:authorizedAccessPoint "The Cambridge edition of the works of Jane Austen." ;
+    bf:title "The Cambridge edition of the works of Jane Austen." .
+
+<http://catalog.coloradocollege.edu/71007642work12> a bf:Work ;
+    bf:authorizedAccessPoint "Works. 2005." ;
+    bf:title "Works. 2005." .
+
+<http://catalog.coloradocollege.edu/71007642> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice / Jane Austen ; edited by Pat Rogers.Pride and prejudice",
+        "austenjane17751817prideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/71007642classification10>,
+        <http://catalog.coloradocollege.edu/71007642classification9> ;
+    bf:contributor <http://catalog.coloradocollege.edu/71007642person7> ;
+    bf:creator <http://catalog.coloradocollege.edu/71007642person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:series <http://catalog.coloradocollege.edu/71007642work11>,
+        <http://catalog.coloradocollege.edu/71007642work12> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/71007642title5> .
+

@@ -1,0 +1,204 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/24426283annotation23> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/24426283> ;
+    bf:changeDate "1994-07-20T15:33" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/24426283.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/coc>,
+        <http://id.loc.gov/vocabulary/organizations/gnd> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/vzf> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/24426283instance24> a bf:Instance,
+        bf:Monograph ;
+    bf:creditsNote "Credits: Musical score, Herbert Stothart ; film editor, Robert J. Kern ; director of photography, Karl Freund ; art director, Cedric Gibbons ; gowns by Adrian." ;
+    bf:dimensions "1/2 in." ;
+    bf:extent "1 videocassette (118 min.) :" ;
+    bf:formDesignation "videorecording" ;
+    bf:illustrationNote "sd., b&w ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/24426283> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/24426283title27> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "Based upon the dramatization of Jane Austen's novel written by Helem Jerome.",
+        "Originally issued as a motion picture in 1940.",
+        "Tale of pre-Victorian British country society in which Mrs. Bennett is faced with the task of marrying her five daughters, of whom the oldest, intelligent and witty Elizabeth, becomes involved with the proud sophisticate Mr. D'Arcy, before all ends well.",
+        "VHS." ;
+    bf:performerNote "Cast: Greer Garson, Laurence Olivier, Mary Boland, Edmund Gwenn, Edna May Oliver, Maureen O'Sullivan, Frieda Inescort, Ann Rutherford, Melville Cooper, Karen Morley, Heather Angel." ;
+    bf:providerStatement "Culver city, CA : MGM/UA Home video, 1990." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "1990" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "MGM/UA Home video" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Culver city, CA " ] ] ;
+    bf:soundContent "Sound on medium",
+        "Videotape" ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue "(CoCC)271554" ],
+        [ a bf:Identifier ;
+            bf:identifierAssigner "tv" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b12245859" ] ;
+    bf:titleStatement "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/24426283summary17> a bf:Summary ;
+    bf:annotationAssertedBy <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:annotationBody "Tale of pre-Victorian British country society in which Mrs. Bennett is faced with the task of marrying her five daughters, of whom the oldest, intelligent and witty Elizabeth, becomes involved with the proud sophisticate Mr. D'Arcy, before all ends well." ;
+    bf:label "Summary" ;
+    bf:summaryOf <http://catalog.coloradocollege.edu/24426283> .
+
+<http://catalog.coloradocollege.edu/24426283organization12> a bf:Organization ;
+    bf:authorizedAccessPoint "Metro-Goldwyn-Mayer." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Metro-Goldwyn-Mayer." ] ;
+    bf:label "Metro-Goldwyn-Mayer." .
+
+<http://catalog.coloradocollege.edu/24426283organization13> a bf:Organization ;
+    bf:authorizedAccessPoint "MGM/UA Home Video (Firm)" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "MGM/UA Home Video (Firm)" ] ;
+    bf:label "MGM/UA Home Video (Firm)" .
+
+<http://catalog.coloradocollege.edu/24426283organization14> a bf:Organization ;
+    bf:authorizedAccessPoint "Loew's Incorporated." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Loew's Incorporated." ] ;
+    bf:label "Loew's Incorporated." .
+
+<http://catalog.coloradocollege.edu/24426283organization15> a bf:Organization ;
+    bf:authorizedAccessPoint "Turner Entertainment Co." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Turner Entertainment Co." ] ;
+    bf:label "Turner Entertainment Co." .
+
+<http://catalog.coloradocollege.edu/24426283person10> a bf:Person ;
+    bf:authorizedAccessPoint "Garson, Greer, 1904-1996." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Garson, Greer, 1904-1996." ] ;
+    bf:label "Garson, Greer, 1904-1996." .
+
+<http://catalog.coloradocollege.edu/24426283person11> a bf:Person ;
+    bf:authorizedAccessPoint "Olivier, Laurence, 1907-1989." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Olivier, Laurence, 1907-1989." ] ;
+    bf:label "Olivier, Laurence, 1907-1989." .
+
+<http://catalog.coloradocollege.edu/24426283person25> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/24426283person6> a bf:Person ;
+    bf:authorizedAccessPoint "Leonard, Robert Z., 1889-1968." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Leonard, Robert Z., 1889-1968." ] ;
+    bf:label "Leonard, Robert Z., 1889-1968." .
+
+<http://catalog.coloradocollege.edu/24426283person7> a bf:Person ;
+    bf:authorizedAccessPoint "Stromberg, Hunt, 1894-1968." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Stromberg, Hunt, 1894-1968." ] ;
+    bf:label "Stromberg, Hunt, 1894-1968." .
+
+<http://catalog.coloradocollege.edu/24426283person8> a bf:Person ;
+    bf:authorizedAccessPoint "Huxley, Aldous, 1894-1963." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Huxley, Aldous, 1894-1963." ] ;
+    bf:label "Huxley, Aldous, 1894-1963." .
+
+<http://catalog.coloradocollege.edu/24426283person9> a bf:Person ;
+    bf:authorizedAccessPoint "Jerome, Helen, 1883-1958." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Jerome, Helen, 1883-1958." ] ;
+    bf:label "Jerome, Helen, 1883-1958." .
+
+<http://catalog.coloradocollege.edu/24426283title27> a bf:Title ;
+    bf:label "Pride and prejudice [videorecording] / Metro-Goldwyn-Mayer ; directed by Robert Z. Leonard ; produced by Hunt Stromberg ; screenplay by Aldous Huxley and Jane Murfin." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/24426283title5> a bf:Title ;
+    bf:label "Pride and prejudice [videorecording] / Metro-Goldwyn-Mayer ; directed by Robert Z. Leonard ; produced by Hunt Stromberg ; screenplay by Aldous Huxley and Jane Murfin." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/24426283topic18> a bf:Topic ;
+    bf:authorizedAccessPoint "Courtship--Great Britain--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Courtship--Great Britain--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Courtship" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Courtship" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "Great Britain" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "Great Britain" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Courtship--Great Britain--Drama" .
+
+<http://catalog.coloradocollege.edu/24426283topic19> a bf:Topic ;
+    bf:authorizedAccessPoint "Families--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Families--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Families" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Families" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Families--Drama" .
+
+<http://catalog.coloradocollege.edu/24426283topic20> a bf:Topic ;
+    bf:authorizedAccessPoint "Feature films" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "Feature films" ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Feature films" .
+
+<http://catalog.coloradocollege.edu/24426283work21> a bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice." ;
+    bf:contributor <http://catalog.coloradocollege.edu/24426283person25> ;
+    bf:title "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/24426283> a bf:MovingImage,
+        bf:Work ;
+    bf:authorizedAccessPoint "Leonard, Robert Z., 1889-1968. Pride and prejudice [videorecording] / Metro-Goldwyn-Mayer ; directed by Robert Z. Leonard ; produced by Hunt Stromberg ; screenplay by Aldous Huxley and Jane Murfin.Pride and prejudice",
+        "prideandprejudicework"@x-bf-hash ;
+    bf:contributor <http://catalog.coloradocollege.edu/24426283organization12>,
+        <http://catalog.coloradocollege.edu/24426283organization13>,
+        <http://catalog.coloradocollege.edu/24426283organization14>,
+        <http://catalog.coloradocollege.edu/24426283organization15>,
+        <http://catalog.coloradocollege.edu/24426283person10>,
+        <http://catalog.coloradocollege.edu/24426283person11>,
+        <http://catalog.coloradocollege.edu/24426283person6>,
+        <http://catalog.coloradocollege.edu/24426283person7>,
+        <http://catalog.coloradocollege.edu/24426283person8>,
+        <http://catalog.coloradocollege.edu/24426283person9> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:relatedResource <http://catalog.coloradocollege.edu/24426283work21> ;
+    bf:subject <http://catalog.coloradocollege.edu/24426283topic18>,
+        <http://catalog.coloradocollege.edu/24426283topic19>,
+        <http://catalog.coloradocollege.edu/24426283topic20> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/24426283title5> .
+

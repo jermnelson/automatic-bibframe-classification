@@ -1,0 +1,77 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/4124646annotation12> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/4124646> ;
+    bf:changeDate "1998-04-13T12:32" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/4124646.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/isbd> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/iqu> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/4124646instance13> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "21 cm." ;
+    bf:extent "435 p. :" ;
+    bf:illustrationNote "ill. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/4124646> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/4124646title16> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "Cleveland : Fine Editions Press, 1946." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "1946" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Fine Editions Press" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Cleveland " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tbp" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b13135971" ] ;
+    bf:titleStatement "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/4124646classification10> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/4124646classification9> a bf:Classification ;
+    bf:classificationNumber "PR4034.P7 1946b" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/4124646person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/4124646person7> a bf:Person ;
+    bf:authorizedAccessPoint "Cirlin, Edgard, 1913-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Cirlin, Edgard, 1913-" ] ;
+    bf:label "Cirlin, Edgard, 1913-" .
+
+<http://catalog.coloradocollege.edu/4124646title16> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen ; with illustrations by Edgard Cirlin." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/4124646title5> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen ; with illustrations by Edgard Cirlin." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/4124646> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice / Jane Austen ; with illustrations by Edgard Cirlin.Pride and prejudice",
+        "austenjane17751817prideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/4124646classification10>,
+        <http://catalog.coloradocollege.edu/4124646classification9> ;
+    bf:contributor <http://catalog.coloradocollege.edu/4124646person7> ;
+    bf:creator <http://catalog.coloradocollege.edu/4124646person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/4124646title5> .
+

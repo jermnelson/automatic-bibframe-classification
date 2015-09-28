@@ -1,0 +1,631 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/62774704annotation72> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/62774704> ;
+    bf:changeDate "2008-06-04T11:24" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/62774704.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/btcta>,
+        <http://id.loc.gov/vocabulary/organizations/cvn>,
+        <http://id.loc.gov/vocabulary/organizations/gk8>,
+        <http://id.loc.gov/vocabulary/organizations/jed>,
+        <http://id.loc.gov/vocabulary/organizations/oclca>,
+        <http://id.loc.gov/vocabulary/organizations/oclcq>,
+        <http://id.loc.gov/vocabulary/organizations/omp>,
+        <http://id.loc.gov/vocabulary/organizations/rcs>,
+        <http://id.loc.gov/vocabulary/organizations/tef>,
+        <http://id.loc.gov/vocabulary/organizations/txi>,
+        <http://id.loc.gov/vocabulary/organizations/wau>,
+        <http://id.loc.gov/vocabulary/organizations/wcm>,
+        <http://id.loc.gov/vocabulary/organizations/ydxcp> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/tefmt> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/62774704instance73> a bf:Instance,
+        bf:Monograph ;
+    bf:creditsNote "Credits: Co-producer, Jane Frazer ; production designer, Sarah Greenwood ; editor, Paul Tothill ; costume designer, Jacqueline Durran ; hair and make-up designer, Fae Hammond ; music by Dario Marianelli ; music supervisor, Nick Angel ; casting by Jina Jay ; art direction by Nick Gottschalk, Mark Swain." ;
+    bf:dimensions "4 3/4 in." ;
+    bf:edition "Widescreen." ;
+    bf:extent "1 videodisc (129 min.) :" ;
+    bf:formDesignation "videorecording" ;
+    bf:illustrationNote "sd., col. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/62774704> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/62774704title76> ;
+    bf:isbn10 <http://isbn.example.org/1417055065> ;
+    bf:isbn13 <http://isbn.example.org/9781417055067> ;
+    bf:languageNote "In English, dubbed French or Spanish dialogue ; optional English, French or Spanish subtitles ; SDH." ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "Based on the novel by Jane Austen.",
+        "DVD ; Region 1 NTSC; Anamorphic widescreen 2.35:1; Dolby Digital 5.1 surround.",
+        "MPAA rating: PG.",
+        "Mr. Bennet is an English gentleman living in Hartfordshire with his overbearing wife and 5 daughters. There is the beautiful Jane, the clever Elizabeth, the bookish Mary, the immature Kitty and the wild Lydia. Unfortunately, if Mr. Bennet dies their house will be inherited by a distant cousin whom they have never met. The family's future happiness and security is dependent on the daughters making good marriages. Life is uneventful until the arrival in the neighbourhood of the rich gentleman Mr. Bingley, who rents a large house so he can spend the summer in the country. Mr. Bingley brings with him his sister and the dashing, rich, but proud Mr. Darcy. Love soon buds for one of the Bennet sisters, while another sister may have jumped to a hasty prejudgment. For the Bennet sisters many trials and tribulations stand between them and their happiness.",
+        "Originally released as a motion picture in 2005.",
+        "Special features: A Bennet family portrait; Jane Austen, ahead of her time; Behind the scenes at the ball; Pride & prejudice: an HBO first look; director's commentary." ;
+    bf:performerNote "Cast: Keira Knightley, Matthew Macfadyen, Brenda Blethyn, Donald Sutherland, Tom Hollander, Rosamund Pike, Jena Malone, Judi Dench, Kelly Reilly, Claudie Blakley, Peter Wight, Penelope Wilton, Simon Woods, Rupert Friend, Carey Mulligan, Talulah Riley." ;
+    bf:providerStatement "England : Focus Features ; Universal City, CA : Universal Studios Home Entertainment, c2006." ;
+    bf:publication [ a bf:Provider ;
+            bf:copyrightDate "c2006." ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Universal Studios Home Entertainment" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Universal City, CA " ] ],
+        [ a bf:Provider ;
+            bf:copyrightDate "c2006." ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Focus Features " ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "England " ] ] ;
+    bf:soundContent "Sound on medium",
+        "Videodisc" ;
+    bf:systemNumber <http://www.worldcat.org/oclc/62774704> ;
+    bf:titleStatement "Pride & prejudice" ;
+    bf:titleVariation <http://catalog.coloradocollege.edu/62774704title77> ;
+    bf:upc [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/upc> ;
+            bf:identifierValue "025192807220" ] ;
+    bf:videorecordingNumber [ a bf:Identifier ;
+            bf:identifierAssigner "Focus Features" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/videorecordingNumber> ;
+            bf:identifierValue "28072" ] .
+
+<http://catalog.coloradocollege.edu/62774704summary49> a bf:Summary ;
+    bf:annotationAssertedBy <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:annotationBody "Mr. Bennet is an English gentleman living in Hartfordshire with his overbearing wife and 5 daughters. There is the beautiful Jane, the clever Elizabeth, the bookish Mary, the immature Kitty and the wild Lydia. Unfortunately, if Mr. Bennet dies their house will be inherited by a distant cousin whom they have never met. The family's future happiness and security is dependent on the daughters making good marriages. Life is uneventful until the arrival in the neighbourhood of the rich gentleman Mr. Bingley, who rents a large house so he can spend the summer in the country. Mr. Bingley brings with him his sister and the dashing, rich, but proud Mr. Darcy. Love soon buds for one of the Bennet sisters, while another sister may have jumped to a hasty prejudgment. For the Bennet sisters many trials and tribulations stand between them and their happiness." ;
+    bf:label "Summary" ;
+    bf:summaryOf <http://catalog.coloradocollege.edu/62774704> .
+
+<http://catalog.coloradocollege.edu/62774704classification66> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/62774704classification67> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/62774704intendedaudience40> a bf:IntendedAudience ;
+    bf:audience "MPAA rating: PG." .
+
+<http://catalog.coloradocollege.edu/62774704language44> a bf:Language ;
+    bf:languageOfPartUri <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:resourcePart "subtitles or captions" .
+
+<http://catalog.coloradocollege.edu/62774704language45> a bf:Language ;
+    bf:languageOfPartUri <http://id.loc.gov/vocabulary/languages/fre> ;
+    bf:resourcePart "subtitles or captions" .
+
+<http://catalog.coloradocollege.edu/62774704language46> a bf:Language ;
+    bf:languageOfPartUri <http://id.loc.gov/vocabulary/languages/spa> ;
+    bf:resourcePart "subtitles or captions" .
+
+<http://catalog.coloradocollege.edu/62774704language47> a bf:Language ;
+    bf:languageOfPartUri <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:resourcePart "original" .
+
+<http://catalog.coloradocollege.edu/62774704language48> a bf:Language ;
+    bf:languageOfPartUri <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:resourcePart "accompanying material other than librettos" .
+
+<http://catalog.coloradocollege.edu/62774704organization34> a bf:Organization ;
+    bf:authorizedAccessPoint "Universal Pictures Company." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Universal Pictures Company." ] ;
+    bf:label "Universal Pictures Company." .
+
+<http://catalog.coloradocollege.edu/62774704organization35> a bf:Organization ;
+    bf:authorizedAccessPoint "Focus Features." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Focus Features." ] ;
+    bf:label "Focus Features." .
+
+<http://catalog.coloradocollege.edu/62774704organization36> a bf:Organization ;
+    bf:authorizedAccessPoint "Studio Canal." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Studio Canal." ] ;
+    bf:label "Studio Canal." .
+
+<http://catalog.coloradocollege.edu/62774704organization37> a bf:Organization ;
+    bf:authorizedAccessPoint "Working Title Films." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Working Title Films." ] ;
+    bf:label "Working Title Films." .
+
+<http://catalog.coloradocollege.edu/62774704organization38> a bf:Organization ;
+    bf:authorizedAccessPoint "Scion Films." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Scion Films." ] ;
+    bf:label "Scion Films." .
+
+<http://catalog.coloradocollege.edu/62774704organization39> a bf:Organization ;
+    bf:authorizedAccessPoint "Universal Studios Home Entertainment (Firm)" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Universal Studios Home Entertainment (Firm)" ] ;
+    bf:label "Universal Studios Home Entertainment (Firm)" .
+
+<http://catalog.coloradocollege.edu/62774704person10> a bf:Person ;
+    bf:authorizedAccessPoint "Moggach, Deborah." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Moggach, Deborah." ] ;
+    bf:label "Moggach, Deborah." .
+
+<http://catalog.coloradocollege.edu/62774704person11> a bf:Person ;
+    bf:authorizedAccessPoint "Hayward, Debra." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Hayward, Debra." ] ;
+    bf:label "Hayward, Debra." .
+
+<http://catalog.coloradocollege.edu/62774704person12> a bf:Person ;
+    bf:authorizedAccessPoint "Chasin, Liza." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Chasin, Liza." ] ;
+    bf:label "Chasin, Liza." .
+
+<http://catalog.coloradocollege.edu/62774704person13> a bf:Person ;
+    bf:authorizedAccessPoint "Osin, Roman, 1960-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Osin, Roman, 1960-" ] ;
+    bf:label "Osin, Roman, 1960-" .
+
+<http://catalog.coloradocollege.edu/62774704person14> a bf:Person ;
+    bf:authorizedAccessPoint "Knightley, Keira, 1985-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Knightley, Keira, 1985-" ] ;
+    bf:label "Knightley, Keira, 1985-" .
+
+<http://catalog.coloradocollege.edu/62774704person15> a bf:Person ;
+    bf:authorizedAccessPoint "Macfadyen, Matthew, 1974-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Macfadyen, Matthew, 1974-" ] ;
+    bf:label "Macfadyen, Matthew, 1974-" .
+
+<http://catalog.coloradocollege.edu/62774704person16> a bf:Person ;
+    bf:authorizedAccessPoint "Blethyn, Brenda, 1946-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Blethyn, Brenda, 1946-" ] ;
+    bf:label "Blethyn, Brenda, 1946-" .
+
+<http://catalog.coloradocollege.edu/62774704person17> a bf:Person ;
+    bf:authorizedAccessPoint "Sutherland, Donald, 1935-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Sutherland, Donald, 1935-" ] ;
+    bf:label "Sutherland, Donald, 1935-" .
+
+<http://catalog.coloradocollege.edu/62774704person18> a bf:Person ;
+    bf:authorizedAccessPoint "Hollander, Tom, 1967-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Hollander, Tom, 1967-" ] ;
+    bf:label "Hollander, Tom, 1967-" .
+
+<http://catalog.coloradocollege.edu/62774704person19> a bf:Person ;
+    bf:authorizedAccessPoint "Pike, Rosamund, 1979-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Pike, Rosamund, 1979-" ] ;
+    bf:label "Pike, Rosamund, 1979-" .
+
+<http://catalog.coloradocollege.edu/62774704person20> a bf:Person ;
+    bf:authorizedAccessPoint "Malone, Jena, 1984-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Malone, Jena, 1984-" ] ;
+    bf:label "Malone, Jena, 1984-" .
+
+<http://catalog.coloradocollege.edu/62774704person21> a bf:Person ;
+    bf:authorizedAccessPoint "Dench, Judi, 1934-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Dench, Judi, 1934-" ] ;
+    bf:label "Dench, Judi, 1934-" .
+
+<http://catalog.coloradocollege.edu/62774704person22> a bf:Person ;
+    bf:authorizedAccessPoint "Reilly, Kelly." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Reilly, Kelly." ] ;
+    bf:label "Reilly, Kelly." .
+
+<http://catalog.coloradocollege.edu/62774704person23> a bf:Person ;
+    bf:authorizedAccessPoint "Blakley, Claudie, 1974-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Blakley, Claudie, 1974-" ] ;
+    bf:label "Blakley, Claudie, 1974-" .
+
+<http://catalog.coloradocollege.edu/62774704person24> a bf:Person ;
+    bf:authorizedAccessPoint "Wight, Peter, 1950-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Wight, Peter, 1950-" ] ;
+    bf:label "Wight, Peter, 1950-" .
+
+<http://catalog.coloradocollege.edu/62774704person25> a bf:Person ;
+    bf:authorizedAccessPoint "Wilton, Penelope, 1946-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Wilton, Penelope, 1946-" ] ;
+    bf:label "Wilton, Penelope, 1946-" .
+
+<http://catalog.coloradocollege.edu/62774704person26> a bf:Person ;
+    bf:authorizedAccessPoint "Woods, Simon, 1980-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Woods, Simon, 1980-" ] ;
+    bf:label "Woods, Simon, 1980-" .
+
+<http://catalog.coloradocollege.edu/62774704person27> a bf:Person ;
+    bf:authorizedAccessPoint "Friend, Rupert." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Friend, Rupert." ] ;
+    bf:label "Friend, Rupert." .
+
+<http://catalog.coloradocollege.edu/62774704person28> a bf:Person ;
+    bf:authorizedAccessPoint "Mulligan, Carey, 1985-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Mulligan, Carey, 1985-" ] ;
+    bf:label "Mulligan, Carey, 1985-" .
+
+<http://catalog.coloradocollege.edu/62774704person29> a bf:Person ;
+    bf:authorizedAccessPoint "Riley, Talulah, 1985-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Riley, Talulah, 1985-" ] ;
+    bf:label "Riley, Talulah, 1985-" .
+
+<http://catalog.coloradocollege.edu/62774704person30> a bf:Person ;
+    bf:authorizedAccessPoint "Greenwood, Sarah." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Greenwood, Sarah." ] ;
+    bf:label "Greenwood, Sarah." .
+
+<http://catalog.coloradocollege.edu/62774704person31> a bf:Person ;
+    bf:authorizedAccessPoint "Tothill, Paul." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Tothill, Paul." ] ;
+    bf:label "Tothill, Paul." .
+
+<http://catalog.coloradocollege.edu/62774704person32> a bf:Person ;
+    bf:authorizedAccessPoint "Durran, Jacqueline." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Durran, Jacqueline." ] ;
+    bf:label "Durran, Jacqueline." .
+
+<http://catalog.coloradocollege.edu/62774704person33> a bf:Person ;
+    bf:authorizedAccessPoint "Marianelli, Dario." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Marianelli, Dario." ] ;
+    bf:label "Marianelli, Dario." .
+
+<http://catalog.coloradocollege.edu/62774704person6> a bf:Person ;
+    bf:authorizedAccessPoint "Wright, Joe, 1972-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Wright, Joe, 1972-" ] ;
+    bf:label "Wright, Joe, 1972-" .
+
+<http://catalog.coloradocollege.edu/62774704person7> a bf:Person ;
+    bf:authorizedAccessPoint "Bevan, Tim." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Bevan, Tim." ] ;
+    bf:label "Bevan, Tim." .
+
+<http://catalog.coloradocollege.edu/62774704person73> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/62774704person8> a bf:Person ;
+    bf:authorizedAccessPoint "Fellner, Eric." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Fellner, Eric." ] ;
+    bf:label "Fellner, Eric." .
+
+<http://catalog.coloradocollege.edu/62774704person9> a bf:Person ;
+    bf:authorizedAccessPoint "Webster, Paul." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Webster, Paul." ] ;
+    bf:label "Webster, Paul." .
+
+<http://catalog.coloradocollege.edu/62774704title5> a bf:Title ;
+    bf:label "Pride & prejudice [videorecording] / Universal ; Focus Features presents in association with Studiocanal a Working Title production ; directed by Joe Wright ; produced by Tim Bevan, Eric Fellner, Paul Webster ; screenplay, Deborah Moggach ; executive producers, Debra Hayward, Liza Chasin ; director of photography, Roman Osin ; produced in association with Scion Films." ;
+    bf:titleValue "Pride & prejudice" .
+
+<http://catalog.coloradocollege.edu/62774704title76> a bf:Title ;
+    bf:label "Pride & prejudice [videorecording] / Universal ; Focus Features presents in association with Studiocanal a Working Title production ; directed by Joe Wright ; produced by Tim Bevan, Eric Fellner, Paul Webster ; screenplay, Deborah Moggach ; executive producers, Debra Hayward, Liza Chasin ; director of photography, Roman Osin ; produced in association with Scion Films." ;
+    bf:titleValue "Pride & prejudice" .
+
+<http://catalog.coloradocollege.edu/62774704title77> a bf:Title ;
+    bf:label "Pride and prejudice." ;
+    bf:titleValue "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/62774704topic51> a bf:Topic ;
+    bf:authorizedAccessPoint "Bennet, Elizabeth (Fictitious character)--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Bennet, Elizabeth (Fictitious character)--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Bennet, Elizabeth (Fictitious character)" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Bennet, Elizabeth (Fictitious character)" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Bennet, Elizabeth (Fictitious character)--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic52> a bf:Topic ;
+    bf:authorizedAccessPoint "Social classes--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Social classes--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Social classes" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Social classes" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Social classes--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic53> a bf:Topic ;
+    bf:authorizedAccessPoint "Young women--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Young women--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Young women" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Young women" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Young women--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic54> a bf:Topic ;
+    bf:authorizedAccessPoint "Courtship--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Courtship--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Courtship" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Courtship" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Courtship--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic55> a bf:Topic ;
+    bf:authorizedAccessPoint "Sisters--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Sisters--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Sisters" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Sisters" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Sisters--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic56> a bf:Topic ;
+    bf:authorizedAccessPoint "Films for the hearing impaired" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "Films for the hearing impaired" ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Films for the hearing impaired" .
+
+<http://catalog.coloradocollege.edu/62774704topic57> a bf:Topic ;
+    bf:authorizedAccessPoint "Feature films" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Feature films" ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Feature films" .
+
+<http://catalog.coloradocollege.edu/62774704topic58> a bf:Topic ;
+    bf:authorizedAccessPoint "Melodrama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Melodrama" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Melodrama" .
+
+<http://catalog.coloradocollege.edu/62774704topic59> a bf:Topic ;
+    bf:authorizedAccessPoint "Romance" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Romance" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Romance" .
+
+<http://catalog.coloradocollege.edu/62774704topic60> a bf:Topic ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/bidex." ;
+    bf:authorizedAccessPoint "Hermanas--Inglaterra--Teatro" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Hermanas--Inglaterra--Teatro" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Hermanas" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Hermanas" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "Inglaterra" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "Inglaterra" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Teatro" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Teatro." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/vocabulary/subjectSchemes/bidex.> ] ;
+    bf:label "Hermanas--Inglaterra--Teatro" .
+
+<http://catalog.coloradocollege.edu/62774704topic61> a bf:Topic ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/bidex." ;
+    bf:authorizedAccessPoint "Matrimonio--Costumbres y ritos--Teatro" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Matrimonio--Costumbres y ritos--Teatro" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Matrimonio" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Matrimonio" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Costumbres y ritos" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Costumbres y ritos" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Teatro" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Teatro." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/vocabulary/subjectSchemes/bidex.> ] ;
+    bf:label "Matrimonio--Costumbres y ritos--Teatro" .
+
+<http://catalog.coloradocollege.edu/62774704topic62> a bf:Topic ;
+    bf:authorizedAccessPoint "Bennet, Elizabeth (Fictitious character)--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Bennet, Elizabeth (Fictitious character)--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Bennet, Elizabeth (Fictitious character)" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Bennet, Elizabeth (Fictitious character)" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Bennet, Elizabeth (Fictitious character)--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic63> a bf:Topic ;
+    bf:authorizedAccessPoint "Social classes--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Social classes--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Social classes" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Social classes" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Social classes--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704topic64> a bf:Topic ;
+    bf:authorizedAccessPoint "Young women--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Young women--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Young women" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Young women" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Young women--Drama" .
+
+<http://catalog.coloradocollege.edu/62774704work68> a bf:Work ;
+    bf:authorizedAccessPoint "Pride & prejudice (Motion picture 2005)" ;
+    bf:title "Pride & prejudice (Motion picture 2005)" .
+
+<http://catalog.coloradocollege.edu/62774704work69> a bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice." ;
+    bf:contributor <http://catalog.coloradocollege.edu/62774704person73> ;
+    bf:title "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/62774704work70> a bf:Work ;
+    bf:authorizedAccessPoint "Focus Features spotlight series." ;
+    bf:title "Focus Features spotlight series." .
+
+<http://catalog.coloradocollege.edu/62774704> a bf:MovingImage,
+        bf:Work ;
+    bf:authorizedAccessPoint "Wright, Joe, 1972- Pride & prejudice [videorecording] / Universal ; Focus Features presents in association with Studiocanal a Working Title production ; directed by Joe Wright ; produced by Tim Bevan, Eric Fellner, Paul Webster ; screenplay, Deborah Moggach ; executive producers, Debra Hayward, Liza Chasin ; director of photography, Roman Osin ; produced in association with Scion Films.Pride & prejudice",
+        "prideprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/62774704classification66>,
+        <http://catalog.coloradocollege.edu/62774704classification67> ;
+    bf:contributor <http://catalog.coloradocollege.edu/62774704organization34>,
+        <http://catalog.coloradocollege.edu/62774704organization35>,
+        <http://catalog.coloradocollege.edu/62774704organization36>,
+        <http://catalog.coloradocollege.edu/62774704organization37>,
+        <http://catalog.coloradocollege.edu/62774704organization38>,
+        <http://catalog.coloradocollege.edu/62774704organization39>,
+        <http://catalog.coloradocollege.edu/62774704person11>,
+        <http://catalog.coloradocollege.edu/62774704person12>,
+        <http://catalog.coloradocollege.edu/62774704person13>,
+        <http://catalog.coloradocollege.edu/62774704person22>,
+        <http://catalog.coloradocollege.edu/62774704person23>,
+        <http://catalog.coloradocollege.edu/62774704person24>,
+        <http://catalog.coloradocollege.edu/62774704person25>,
+        <http://catalog.coloradocollege.edu/62774704person26>,
+        <http://catalog.coloradocollege.edu/62774704person27>,
+        <http://catalog.coloradocollege.edu/62774704person28>,
+        <http://catalog.coloradocollege.edu/62774704person29>,
+        <http://catalog.coloradocollege.edu/62774704person30>,
+        <http://catalog.coloradocollege.edu/62774704person31>,
+        <http://catalog.coloradocollege.edu/62774704person32> ;
+    bf:intendedAudience <http://catalog.coloradocollege.edu/62774704intendedaudience40>,
+        <http://id.loc.gov/vocabulary/targetAudiences/gen> ;
+    bf:language <http://catalog.coloradocollege.edu/62774704language44>,
+        <http://catalog.coloradocollege.edu/62774704language45>,
+        <http://catalog.coloradocollege.edu/62774704language46>,
+        <http://catalog.coloradocollege.edu/62774704language47>,
+        <http://catalog.coloradocollege.edu/62774704language48>,
+        <http://id.loc.gov/vocabulary/languages/eng>,
+        <http://id.loc.gov/vocabulary/languages/fre>,
+        <http://id.loc.gov/vocabulary/languages/spa> ;
+    bf:relatedResource <http://catalog.coloradocollege.edu/62774704work68>,
+        <http://catalog.coloradocollege.edu/62774704work69> ;
+    bf:series <http://catalog.coloradocollege.edu/62774704work70> ;
+    bf:subject <http://catalog.coloradocollege.edu/62774704topic51>,
+        <http://catalog.coloradocollege.edu/62774704topic52>,
+        <http://catalog.coloradocollege.edu/62774704topic53>,
+        <http://catalog.coloradocollege.edu/62774704topic54>,
+        <http://catalog.coloradocollege.edu/62774704topic55>,
+        <http://catalog.coloradocollege.edu/62774704topic56>,
+        <http://catalog.coloradocollege.edu/62774704topic57>,
+        <http://catalog.coloradocollege.edu/62774704topic58>,
+        <http://catalog.coloradocollege.edu/62774704topic59>,
+        <http://catalog.coloradocollege.edu/62774704topic60>,
+        <http://catalog.coloradocollege.edu/62774704topic61>,
+        <http://catalog.coloradocollege.edu/62774704topic62>,
+        <http://catalog.coloradocollege.edu/62774704topic63>,
+        <http://catalog.coloradocollege.edu/62774704topic64>,
+        <http://id.loc.gov/vocabulary/geographicAreas/e-uk-en> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/62774704title5> ;
+    <http://id.loc.gov/vocabulary/relators/act.> <http://catalog.coloradocollege.edu/62774704person14>,
+        <http://catalog.coloradocollege.edu/62774704person15>,
+        <http://catalog.coloradocollege.edu/62774704person16>,
+        <http://catalog.coloradocollege.edu/62774704person17>,
+        <http://catalog.coloradocollege.edu/62774704person18>,
+        <http://catalog.coloradocollege.edu/62774704person19>,
+        <http://catalog.coloradocollege.edu/62774704person20>,
+        <http://catalog.coloradocollege.edu/62774704person21> ;
+    <http://id.loc.gov/vocabulary/relators/aus.> <http://catalog.coloradocollege.edu/62774704person10> ;
+    <http://id.loc.gov/vocabulary/relators/cmp.> <http://catalog.coloradocollege.edu/62774704person33> ;
+    <http://id.loc.gov/vocabulary/relators/drt.> <http://catalog.coloradocollege.edu/62774704person6> ;
+    <http://id.loc.gov/vocabulary/relators/pro.> <http://catalog.coloradocollege.edu/62774704person7>,
+        <http://catalog.coloradocollege.edu/62774704person8>,
+        <http://catalog.coloradocollege.edu/62774704person9> .
+

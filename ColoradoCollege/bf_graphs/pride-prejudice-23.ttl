@@ -1,0 +1,62 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/4447061annotation10> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/4447061> ;
+    bf:changeDate "2001-05-09T15:47" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/4447061.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/iae> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/cle> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/4447061instance11> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "19cm." ;
+    bf:edition "Chawton ed." ;
+    bf:extent "325 p. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/4447061> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/4447061title14> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "London : Allan Wingate , 1948." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "1948" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Allan Wingate " ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "London " ] ] ;
+    bf:titleStatement "Sense and sensibility" .
+
+<http://catalog.coloradocollege.edu/4447061classification8> a bf:Classification ;
+    bf:classificationNumber "PR4034" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/4447061person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/4447061title14> a bf:Title ;
+    bf:label "Sense and sensibility / Jane Austen." ;
+    bf:titleValue "Sense and sensibility" .
+
+<http://catalog.coloradocollege.edu/4447061title5> a bf:Title ;
+    bf:label "Sense and sensibility / Jane Austen." ;
+    bf:titleValue "Sense and sensibility" .
+
+<http://catalog.coloradocollege.edu/4447061> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Sense and sensibility / Jane Austen.Sense and sensibility",
+        "austenjane17751817senseandsensibilitywork"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/4447061classification8> ;
+    bf:creator <http://catalog.coloradocollege.edu/4447061person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/4447061title5> .
+

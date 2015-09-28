@@ -1,0 +1,300 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/48075651annotation34> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/48075651> ;
+    bf:changeDate "2004-10-12T11:22" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/48075651.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/fvc>,
+        <http://id.loc.gov/vocabulary/organizations/ihi>,
+        <http://id.loc.gov/vocabulary/organizations/oclcq>,
+        <http://id.loc.gov/vocabulary/organizations/rls> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/ifj> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/48075651instance35> a bf:Instance,
+        bf:Monograph ;
+    bf:creditsNote "Credits: Photography, John Kenway ; film editor, Peter Coulson ; music, Carl Davis." ;
+    bf:dimensions "4 3/4 in. +" ;
+    bf:edition "Special ed." ;
+    bf:extent "2 videodiscs (300 min.) : 1 booklet." ;
+    bf:formDesignation "videorecording" ;
+    bf:illustrationNote "sd., col. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/48075651> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/48075651title38> ;
+    bf:isbn10 <http://isbn.example.org/0767038266>,
+        <http://isbn.example.org/0767038274>,
+        <http://isbn.example.org/0767038282> ;
+    bf:isbn13 <http://isbn.example.org/9780767038263>,
+        <http://isbn.example.org/9780767038270>,
+        <http://isbn.example.org/9780767038287> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "Based on the novel by Jane Austen.",
+        "Booklet (7 p.) includes list of chapters, and cast and crew reminiscences.",
+        "DVD; Dolby, digital, stereo.",
+        "Film format: anamorphic widescreen (2.35:1)",
+        "Not rated.",
+        "Originally produced for 1995 miniseries television broadcast.",
+        "Special features: vol. 1: biographies ; vol. 2: featurette (The making of Pride and prejudice)",
+        "The story of lively and rebellious Elizabeth, one of five unmarried daughters living in the countryside of 19th century England, in a world where an advantageous marriage is a woman's sole occupation." ;
+    bf:performerNote "Cast: Colin Firth, Jennifer Ehle, Alison Steadman, Benjamin Whitrow, Susannah Harker, Crispin Bonham-Carter, Anna Chancellor, Julia Sawalha, David Bamber, David Bark-Jones." ;
+    bf:providerStatement "London? : British Broadcasting Corp., 2001." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "2001" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "British Broadcasting Corp" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "London? " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tvdvd" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b1629290x" ] ;
+    bf:titleStatement "Jane Austen's Pride and prejudice" ;
+    bf:titleVariation <http://catalog.coloradocollege.edu/48075651title39> ;
+    bf:videorecordingNumber [ a bf:Identifier ;
+            bf:identifierAssigner "A & E Home Video" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/videorecordingNumber> ;
+            bf:identifierValue "AAE-70255--AAE-72056" ] .
+
+<http://catalog.coloradocollege.edu/48075651summary21> a bf:Summary ;
+    bf:annotationAssertedBy <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:annotationBody "The story of lively and rebellious Elizabeth, one of five unmarried daughters living in the countryside of 19th century England, in a world where an advantageous marriage is a woman's sole occupation." ;
+    bf:label "Summary" ;
+    bf:summaryOf <http://catalog.coloradocollege.edu/48075651> .
+
+<http://catalog.coloradocollege.edu/48075651classification30> a bf:Classification ;
+    bf:classificationNumber "PN1997" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/48075651classification31> a bf:Classification ;
+    bf:classificationNumber "PN1997" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/48075651intendedaudience19> a bf:IntendedAudience ;
+    bf:audience "Not rated." .
+
+<http://catalog.coloradocollege.edu/48075651organization16> a bf:Organization ;
+    bf:authorizedAccessPoint "Arts and Entertainment Network." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Arts and Entertainment Network." ] ;
+    bf:label "Arts and Entertainment Network." .
+
+<http://catalog.coloradocollege.edu/48075651organization17> a bf:Organization ;
+    bf:authorizedAccessPoint "British Broadcasting Corporation." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "British Broadcasting Corporation." ] ;
+    bf:label "British Broadcasting Corporation." .
+
+<http://catalog.coloradocollege.edu/48075651organization18> a bf:Organization ;
+    bf:authorizedAccessPoint "A & E Home Video (Firm)" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "A & E Home Video (Firm)" ] ;
+    bf:label "A & E Home Video (Firm)" .
+
+<http://catalog.coloradocollege.edu/48075651person10> a bf:Person ;
+    bf:authorizedAccessPoint "Harker, Susannah." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Harker, Susannah." ] ;
+    bf:label "Harker, Susannah." .
+
+<http://catalog.coloradocollege.edu/48075651person11> a bf:Person ;
+    bf:authorizedAccessPoint "Bonham-Carter, Crispin." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Bonham-Carter, Crispin." ] ;
+    bf:label "Bonham-Carter, Crispin." .
+
+<http://catalog.coloradocollege.edu/48075651person12> a bf:Person ;
+    bf:authorizedAccessPoint "Chancellor, Anna." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Chancellor, Anna." ] ;
+    bf:label "Chancellor, Anna." .
+
+<http://catalog.coloradocollege.edu/48075651person13> a bf:Person ;
+    bf:authorizedAccessPoint "Sawalha, Julia, 1968-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Sawalha, Julia, 1968-" ] ;
+    bf:label "Sawalha, Julia, 1968-" .
+
+<http://catalog.coloradocollege.edu/48075651person14> a bf:Person ;
+    bf:authorizedAccessPoint "Bamber, David." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Bamber, David." ] ;
+    bf:label "Bamber, David." .
+
+<http://catalog.coloradocollege.edu/48075651person15> a bf:Person ;
+    bf:authorizedAccessPoint "Langton, Simon." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Langton, Simon." ] ;
+    bf:label "Langton, Simon." .
+
+<http://catalog.coloradocollege.edu/48075651person23> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817--Film adaptations." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817--Film adaptations." ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:PersonalName ;
+                        madsrdf:authoritativeLabel "Austen, Jane, 1775-1817" ;
+                        madsrdf:elementList ( [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "Austen, Jane," ] [ a madsrdf:DateNameElement ;
+                                    madsrdf:elementValue "1775-1817" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Film adaptations" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Film adaptations." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Austen, Jane, 1775-1817--Film adaptations." .
+
+<http://catalog.coloradocollege.edu/48075651person36> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/48075651person6> a bf:Person ;
+    bf:authorizedAccessPoint "Firth, Colin, 1960-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Firth, Colin, 1960-" ] ;
+    bf:label "Firth, Colin, 1960-" .
+
+<http://catalog.coloradocollege.edu/48075651person7> a bf:Person ;
+    bf:authorizedAccessPoint "Ehle, Jennifer, 1969-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Ehle, Jennifer, 1969-" ] ;
+    bf:label "Ehle, Jennifer, 1969-" .
+
+<http://catalog.coloradocollege.edu/48075651person8> a bf:Person ;
+    bf:authorizedAccessPoint "Steadman, Alison, 1946-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Steadman, Alison, 1946-" ] ;
+    bf:label "Steadman, Alison, 1946-" .
+
+<http://catalog.coloradocollege.edu/48075651person9> a bf:Person ;
+    bf:authorizedAccessPoint "Whitrow, Benjamin." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Whitrow, Benjamin." ] ;
+    bf:label "Whitrow, Benjamin." .
+
+<http://catalog.coloradocollege.edu/48075651title38> a bf:Title ;
+    bf:label "Jane Austen's Pride and prejudice [videorecording] / a co-production of BBC Television and BBC Worldwide Americas, Inc. in association with A & E Network ; screenplay by Andrew Davies ; directed by Simon Langton ; produced by Sue Birtwistle." ;
+    bf:titleValue "Jane Austen's Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/48075651title39> a bf:Title ;
+    bf:label "Pride and prejudice." ;
+    bf:titleType "portion" ;
+    bf:titleValue "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/48075651title5> a bf:Title ;
+    bf:label "Jane Austen's Pride and prejudice [videorecording] / a co-production of BBC Television and BBC Worldwide Americas, Inc. in association with A & E Network ; screenplay by Andrew Davies ; directed by Simon Langton ; produced by Sue Birtwistle." ;
+    bf:titleValue "Jane Austen's Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/48075651topic24> a bf:Topic ;
+    bf:authorizedAccessPoint "Young women--England--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Young women--England--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Young women" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Young women" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "England" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "England" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Young women--England--Drama" .
+
+<http://catalog.coloradocollege.edu/48075651topic25> a bf:Topic ;
+    bf:authorizedAccessPoint "Courtship--England--Drama" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Courtship--England--Drama" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Courtship" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Courtship" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "England" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "England" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Drama" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Drama." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Courtship--England--Drama" .
+
+<http://catalog.coloradocollege.edu/48075651topic26> a bf:Topic ;
+    bf:authorizedAccessPoint "Television adaptations" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "Television adaptations" ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Television adaptations" .
+
+<http://catalog.coloradocollege.edu/48075651topic27> a bf:Topic ;
+    bf:authorizedAccessPoint "Television mini-series" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "Television mini-series" ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Television mini-series" .
+
+<http://catalog.coloradocollege.edu/48075651topic28> a bf:Topic ;
+    bf:authorizedAccessPoint "Love stories" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Love stories" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Love stories" .
+
+<http://catalog.coloradocollege.edu/48075651work32> a bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice." ;
+    bf:contributor <http://catalog.coloradocollege.edu/48075651person36> ;
+    bf:title "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/48075651> a bf:MovingImage,
+        bf:Work ;
+    bf:authorizedAccessPoint "Firth, Colin, 1960- Jane Austen's Pride and prejudice [videorecording] / a co-production of BBC Television and BBC Worldwide Americas, Inc. in association with A & E Network ; screenplay by Andrew Davies ; directed by Simon Langton ; produced by Sue Birtwistle.Jane Austen's Pride and prejudice",
+        "janeaustensprideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/48075651classification30>,
+        <http://catalog.coloradocollege.edu/48075651classification31> ;
+    bf:contributor <http://catalog.coloradocollege.edu/48075651organization16>,
+        <http://catalog.coloradocollege.edu/48075651organization17>,
+        <http://catalog.coloradocollege.edu/48075651organization18>,
+        <http://catalog.coloradocollege.edu/48075651person10>,
+        <http://catalog.coloradocollege.edu/48075651person11>,
+        <http://catalog.coloradocollege.edu/48075651person12>,
+        <http://catalog.coloradocollege.edu/48075651person13>,
+        <http://catalog.coloradocollege.edu/48075651person14>,
+        <http://catalog.coloradocollege.edu/48075651person15>,
+        <http://catalog.coloradocollege.edu/48075651person6>,
+        <http://catalog.coloradocollege.edu/48075651person7>,
+        <http://catalog.coloradocollege.edu/48075651person8>,
+        <http://catalog.coloradocollege.edu/48075651person9> ;
+    bf:intendedAudience <http://catalog.coloradocollege.edu/48075651intendedaudience19>,
+        <http://id.loc.gov/vocabulary/targetAudiences/gen> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:relatedResource <http://catalog.coloradocollege.edu/48075651work32> ;
+    bf:subject <http://catalog.coloradocollege.edu/48075651person23>,
+        <http://catalog.coloradocollege.edu/48075651topic24>,
+        <http://catalog.coloradocollege.edu/48075651topic25>,
+        <http://catalog.coloradocollege.edu/48075651topic26>,
+        <http://catalog.coloradocollege.edu/48075651topic27>,
+        <http://catalog.coloradocollege.edu/48075651topic28>,
+        <http://id.loc.gov/vocabulary/geographicAreas/e-uk-en> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/48075651title5> .
+

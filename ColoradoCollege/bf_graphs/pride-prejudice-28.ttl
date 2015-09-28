@@ -1,0 +1,69 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/5325574annotation10> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/5325574> ;
+    bf:changeDate "1985-04-30T16:05" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/5325574.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/isbd> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/coc>,
+        <http://id.loc.gov/vocabulary/organizations/m.c.> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/icg> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/5325574instance11> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "22 cm." ;
+    bf:extent "378 p. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/5325574> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/5325574title14> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "Garden City, N. Y. : Nelson Doubleday, n.d." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "[n.d.]" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Nelson Doubleday" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Garden City, N. Y. " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue "(CoCC)26743" ],
+        [ a bf:Identifier ;
+            bf:identifierAssigner "tbp" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b11469444" ] ;
+    bf:titleStatement "Emma" .
+
+<http://catalog.coloradocollege.edu/5325574classification8> a bf:Classification ;
+    bf:classificationNumber "PR4034.E4" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/5325574person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/5325574title14> a bf:Title ;
+    bf:label "Emma / Jane Austen." ;
+    bf:titleValue "Emma" .
+
+<http://catalog.coloradocollege.edu/5325574title5> a bf:Title ;
+    bf:label "Emma / Jane Austen." ;
+    bf:titleValue "Emma" .
+
+<http://catalog.coloradocollege.edu/5325574> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Emma / Jane Austen.Emma",
+        "austenjane17751817emmawork"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/5325574classification8> ;
+    bf:creator <http://catalog.coloradocollege.edu/5325574person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/5325574title5> .
+

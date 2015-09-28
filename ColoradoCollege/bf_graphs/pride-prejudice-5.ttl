@@ -1,0 +1,164 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/15525100annotation17> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/15525100> ;
+    bf:changeDate "1996-12-20T00:00" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/15525100.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/15525100helditem33> a bf:HeldItem ;
+    bf:holdingFor <http://catalog.coloradocollege.edu/15525100instance18> ;
+    bf:label "PR4034 .P7 1991" ;
+    bf:shelfMarkLcc "PR4034 .P7 1991" .
+
+<http://catalog.coloradocollege.edu/15525100classification14> a bf:Classification ;
+    bf:classificationNumber "PR4034.P7 1991" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/15525100instance18> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "22 cm." ;
+    bf:extent "xxxix, 368 p. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/15525100> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/15525100title21> ;
+    bf:isbn10 <http://isbn.example.org/0679405429> ;
+    bf:isbn13 <http://isbn.example.org/9780679405429> ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            bf:identifierValue "91052940 //r93" ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "New York : Knopf, c1991." ;
+    bf:publication [ a bf:Provider ;
+            bf:copyrightDate "c1991." ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Knopf" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "New York " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tbp" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b11432159" ] ;
+    bf:titleStatement "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/15525100person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/15525100title21> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/15525100title5> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen." ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/15525100topic10> a bf:Topic ;
+    bf:authorizedAccessPoint "Families--England--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Families--England--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Families" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Families" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "England" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "England" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Families--England--Fiction" .
+
+<http://catalog.coloradocollege.edu/15525100topic11> a bf:Topic ;
+    bf:authorizedAccessPoint "Domestic fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Domestic fiction" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Domestic fiction" .
+
+<http://catalog.coloradocollege.edu/15525100topic12> a bf:Topic ;
+    bf:authorizedAccessPoint "Love stories" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Love stories" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Love stories" .
+
+<http://catalog.coloradocollege.edu/15525100topic8> a bf:Topic ;
+    bf:authorizedAccessPoint "Young women--England--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Young women--England--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Young women" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Young women" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "England" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "England" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Young women--England--Fiction" .
+
+<http://catalog.coloradocollege.edu/15525100topic9> a bf:Topic ;
+    bf:authorizedAccessPoint "Courtship--England--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Courtship--England--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Courtship" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Courtship" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "England" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "England" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Courtship--England--Fiction" .
+
+<http://catalog.coloradocollege.edu/15525100work15> a bf:Work ;
+    bf:authorizedAccessPoint "Everyman's library." ;
+    bf:title "Everyman's library." .
+
+<http://catalog.coloradocollege.edu/15525100> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice / Jane Austen.Pride and prejudice",
+        "austenjane17751817prideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/15525100classification14> ;
+    bf:classificationLcc <http://id.loc.gov/authorities/classification/PR4034> ;
+    bf:creator <http://catalog.coloradocollege.edu/15525100person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:series <http://catalog.coloradocollege.edu/15525100work15> ;
+    bf:subject <http://catalog.coloradocollege.edu/15525100topic10>,
+        <http://catalog.coloradocollege.edu/15525100topic11>,
+        <http://catalog.coloradocollege.edu/15525100topic12>,
+        <http://catalog.coloradocollege.edu/15525100topic8>,
+        <http://catalog.coloradocollege.edu/15525100topic9> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/15525100title5> .
+

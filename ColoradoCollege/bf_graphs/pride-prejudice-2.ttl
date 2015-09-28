@@ -1,0 +1,90 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/22436751annotation12> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/22436751> ;
+    bf:changeDate "1996-11-13T13:01" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/22436751.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/cus> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/hhg> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/22436751instance13> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "25 cm." ;
+    bf:extent "378 p., 16 leaves of plates :" ;
+    bf:illustrationNote "ill. (some col.) ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/22436751> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/22436751title16> ;
+    bf:manufacture [ a bf:Provider ;
+            bf:providerDate "1945" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Boston " ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Merrymount Press)" ] ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "\"This edition is limited to one thousand numbered copies signed by the artist\"--leaf inserted at front.",
+        "Also issued in a trade edition.",
+        "Smith, J.P.  Merrymount Press (1975)," ;
+    bf:providerStatement "Garden City, N.Y. : Doubleday Doran, 1945" ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "1945" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Doubleday Doran" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Garden City, N.Y. " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tbp" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b12764218" ],
+        [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue "(HOL)AGM1970-5/hou/2" ] ;
+    bf:titleStatement "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/22436751classification9> a bf:Classification ;
+    bf:classificationNumber "PR4034.P7 1945b" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/22436751person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/22436751person7> a bf:Person ;
+    bf:authorizedAccessPoint "Ball, Robert, b. 1890." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Ball, Robert, b. 1890." ] ;
+    bf:label "Ball, Robert, b. 1890." .
+
+<http://catalog.coloradocollege.edu/22436751title16> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen ; [drawings by Robert Ball]" ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/22436751title5> a bf:Title ;
+    bf:label "Pride and prejudice / Jane Austen ; [drawings by Robert Ball]" ;
+    bf:titleValue "Pride and prejudice" .
+
+<http://catalog.coloradocollege.edu/22436751work10> a bf:Work ;
+    bf:authorizedAccessPoint "Doubleday Doran limited editions." ;
+    bf:title "Doubleday Doran limited editions." .
+
+<http://catalog.coloradocollege.edu/22436751> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice / Jane Austen ; [drawings by Robert Ball]Pride and prejudice",
+        "austenjane17751817prideandprejudicework"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/22436751classification9> ;
+    bf:contributor <http://catalog.coloradocollege.edu/22436751person7> ;
+    bf:creator <http://catalog.coloradocollege.edu/22436751person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:series <http://catalog.coloradocollege.edu/22436751work10> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/22436751title5> .
+

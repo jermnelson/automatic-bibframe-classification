@@ -1,0 +1,175 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/56198868annotation18> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/56198868> ;
+    bf:changeDate "2005-02-28T10:46" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/56198868.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/c#p> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/56198868helditem39> a bf:HeldItem ;
+    bf:holdingFor <http://catalog.coloradocollege.edu/56198868instance19> ;
+    bf:label "PS3602.E267 S87 2005" ;
+    bf:shelfMarkLcc "PS3602.E267 S87 2005" .
+
+<http://catalog.coloradocollege.edu/56198868instance19> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "22 cm." ;
+    bf:ean [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/ean> ;
+            bf:identifierValue "9780765305091" ] ;
+    bf:edition "1st ed." ;
+    bf:extent "301 p. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/56198868> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/56198868title22> ;
+    bf:isbn10 <http://isbn.example.org/0765305097> ;
+    bf:isbn13 <http://isbn.example.org/9780765305091> ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            bf:identifierValue "2004056304" ] ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "A sequel to Pride and prescience, or, A truth universally acknowledged, which was a sequel to Jane Austen's Pride and prejudice." ;
+    bf:providerStatement "New York : Forge Books, 2005." ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "2005" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Forge Books" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "New York " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tcbs" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b16366396" ] ;
+    bf:titleStatement "Suspense and sensibility, or, First impressions, revisited : a Mr. & Mrs. Darcy mystery" ;
+    bf:titleVariation <http://catalog.coloradocollege.edu/56198868title23>,
+        <http://catalog.coloradocollege.edu/56198868title24> .
+
+<http://catalog.coloradocollege.edu/56198868person20> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/56198868person6> a bf:Person ;
+    bf:authorizedAccessPoint "Bebris, Carrie." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Bebris, Carrie." ] ;
+    bf:label "Bebris, Carrie." .
+
+<http://catalog.coloradocollege.edu/56198868title22> a bf:Title ;
+    bf:label "Suspense and sensibility, or, First impressions, revisited : a Mr. & Mrs. Darcy mystery / Carrie Bebris." ;
+    bf:subtitle "a Mr. & Mrs. Darcy mystery " ;
+    bf:titleValue "Suspense and sensibility, or, First impressions, revisited :" .
+
+<http://catalog.coloradocollege.edu/56198868title23> a bf:Title ;
+    bf:label "Suspense and sensibility." ;
+    bf:titleType "portion" ;
+    bf:titleValue "Suspense and sensibility." .
+
+<http://catalog.coloradocollege.edu/56198868title24> a bf:Title ;
+    bf:label "First impressions, revisited." ;
+    bf:titleType "portion" ;
+    bf:titleValue "First impressions, revisited." .
+
+<http://catalog.coloradocollege.edu/56198868title5> a bf:Title ;
+    bf:label "Suspense and sensibility, or, First impressions, revisited : a Mr. & Mrs. Darcy mystery / Carrie Bebris." ;
+    bf:subtitle "a Mr. & Mrs. Darcy mystery " ;
+    bf:titleValue "Suspense and sensibility, or, First impressions, revisited :" .
+
+<http://catalog.coloradocollege.edu/56198868topic10> a bf:Topic ;
+    bf:authorizedAccessPoint "Married people--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Married people--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Married people" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Married people" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Married people--Fiction" .
+
+<http://catalog.coloradocollege.edu/56198868topic11> a bf:Topic ;
+    bf:authorizedAccessPoint "Historical fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Historical fiction" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Historical fiction" .
+
+<http://catalog.coloradocollege.edu/56198868topic12> a bf:Topic ;
+    bf:authorizedAccessPoint "Mystery fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Mystery fiction" ;
+            madsrdf:isMemberOfMADSScheme <> ] ;
+    bf:label "Mystery fiction" .
+
+<http://catalog.coloradocollege.edu/56198868topic8> a bf:Topic ;
+    bf:authorizedAccessPoint "Bennet, Elizabeth (Fictitious character)--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Bennet, Elizabeth (Fictitious character)--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Bennet, Elizabeth (Fictitious character)" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Bennet, Elizabeth (Fictitious character)" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Bennet, Elizabeth (Fictitious character)--Fiction" .
+
+<http://catalog.coloradocollege.edu/56198868topic9> a bf:Topic ;
+    bf:authorizedAccessPoint "Darcy, Fitzwilliam (Fictitious character)--Fiction" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Darcy, Fitzwilliam (Fictitious character)--Fiction" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Darcy, Fitzwilliam (Fictitious character)" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Darcy, Fitzwilliam (Fictitious character)" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:GenreForm ;
+                        madsrdf:authoritativeLabel "Fiction" ;
+                        madsrdf:elementList ( [ a madsrdf:GenreFormElement ;
+                                    madsrdf:elementValue "Fiction." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ] ;
+    bf:label "Darcy, Fitzwilliam (Fictitious character)--Fiction" .
+
+<http://catalog.coloradocollege.edu/56198868work16> a bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Pride and prejudice." ;
+    bf:contributor <http://catalog.coloradocollege.edu/56198868person20> ;
+    bf:title "Pride and prejudice." .
+
+<http://catalog.coloradocollege.edu/56198868> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Bebris, Carrie. Suspense and sensibility, or, First impressions, revisited : a Mr. & Mrs. Darcy mystery / Carrie Bebris.Suspense and sensibility, or, First impressions, revisited :a Mr. & Mrs. Darcy mystery",
+        "bebriscarriesuspenseandsensibilityorfirstimpressionsrevisitedamrmrsdarcymysterywork"@x-bf-hash ;
+    bf:classificationLcc <http://id.loc.gov/authorities/classification/PS3602.E267> ;
+    bf:creator <http://catalog.coloradocollege.edu/56198868person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:relatedResource <http://catalog.coloradocollege.edu/56198868work16> ;
+    bf:subject <http://catalog.coloradocollege.edu/56198868topic10>,
+        <http://catalog.coloradocollege.edu/56198868topic11>,
+        <http://catalog.coloradocollege.edu/56198868topic12>,
+        <http://catalog.coloradocollege.edu/56198868topic8>,
+        <http://catalog.coloradocollege.edu/56198868topic9>,
+        <http://id.loc.gov/vocabulary/geographicAreas/e-uk-en> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/56198868title5> .
+

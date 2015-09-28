@@ -1,0 +1,68 @@
+@prefix bf: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab2/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/13309016annotation10> a bf:Annotation ;
+    bf:annotates <http://catalog.coloradocollege.edu/13309016> ;
+    bf:changeDate "1995-03-13T18:24" ;
+    bf:derivedFrom <http://catalog.coloradocollege.edu/13309016.marcxml.xml> ;
+    bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/aacr2> ;
+    bf:descriptionModifier <http://id.loc.gov/vocabulary/organizations/iay> ;
+    bf:descriptionSource <http://id.loc.gov/vocabulary/organizations/dmm> ;
+    bf:generationProcess "DLC transform-tool:2015-09-24-T11:01:00" .
+
+<http://catalog.coloradocollege.edu/13309016instance11> a bf:Instance,
+        bf:Monograph ;
+    bf:dimensions "23 cm." ;
+    bf:extent "175 p. :" ;
+    bf:illustrationNote "ill. ;" ;
+    bf:instanceOf <http://catalog.coloradocollege.edu/13309016> ;
+    bf:instanceTitle <http://catalog.coloradocollege.edu/13309016title14> ;
+    bf:isbn10 <http://isbn.example.org/0899662870> ;
+    bf:isbn13 <http://isbn.example.org/9780899662879> ;
+    bf:modeOfIssuance "single unit" ;
+    bf:providerStatement "Cutchogue, N.Y. : Buccaneer Books, c1985." ;
+    bf:publication [ a bf:Provider ;
+            bf:copyrightDate "c1985." ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Buccaneer Books" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Cutchogue, N.Y. " ] ] ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierAssigner "tscof" ;
+            bf:identifierScheme <http://id.loc.gov/vocabulary/identifiers/systemNumber> ;
+            bf:identifierValue ".b12386522" ] ;
+    bf:titleStatement "Sense and sensibility" .
+
+<http://catalog.coloradocollege.edu/13309016classification8> a bf:Classification ;
+    bf:classificationNumber "PR4034.S4 1985" ;
+    bf:classificationScheme "" .
+
+<http://catalog.coloradocollege.edu/13309016person6> a bf:Person ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817." ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Austen, Jane, 1775-1817." ] ;
+    bf:label "Austen, Jane, 1775-1817." .
+
+<http://catalog.coloradocollege.edu/13309016title14> a bf:Title ;
+    bf:label "Sense and sensibility / Jane Austen." ;
+    bf:titleValue "Sense and sensibility" .
+
+<http://catalog.coloradocollege.edu/13309016title5> a bf:Title ;
+    bf:label "Sense and sensibility / Jane Austen." ;
+    bf:titleValue "Sense and sensibility" .
+
+<http://catalog.coloradocollege.edu/13309016> a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Austen, Jane, 1775-1817. Sense and sensibility / Jane Austen.Sense and sensibility",
+        "austenjane17751817senseandsensibilitywork"@x-bf-hash ;
+    bf:classification <http://catalog.coloradocollege.edu/13309016classification8> ;
+    bf:creator <http://catalog.coloradocollege.edu/13309016person6> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:workTitle <http://catalog.coloradocollege.edu/13309016title5> .
+
